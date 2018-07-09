@@ -25,10 +25,10 @@ class App extends Component {
       <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-         <a aria-label="Left Align">
-         <span class="glyphicon glyphicon-scissors" aria-hidden="true">
-         </span>
-         </a>
+            <a aria-label="Left Align">
+              <span class="glyphicon glyphicon-scissors" aria-hidden="true">
+              </span>
+            </a>
             <h3 class="panel-title" >
               SNIPPET CATALOG
             </h3>
