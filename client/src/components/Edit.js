@@ -28,9 +28,9 @@ class Edit extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { isbn, title, author, description } = this.state.book;
+    const { isbn, title, author, description,publisher } = this.state.book;
 
-    axios.put('/api/book/'+this.props.match.params.id, { isbn, title, author, description })
+    axios.put('/api/book/'+this.props.match.params.id, { isbn, title, author, description,publisher })
       .then((result) => {
         this.props.history.push("/show/"+this.props.match.params.id)
       });
@@ -63,6 +63,10 @@ class Edit extends Component {
               <div class="form-group">
                 <label for="description">Description:</label>
                 <input type="text" rows="11" class="form-control" name="description" value={this.state.book.description} onChange={this.onChange} placeholder="Description" />
+              </div>
+              <div class="form-group">
+                <label for="publisher">Comments:</label>
+                <input type="text" class="form-control" name="publisher" value={this.state.book.publisher} onChange={this.onChange} placeholder="Comments" />
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
