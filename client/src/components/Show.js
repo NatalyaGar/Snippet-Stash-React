@@ -45,8 +45,11 @@ class Show extends Component {
               <dd>{this.state.book.author}</dd>
               <dt>Description:</dt>
               <dd>{this.state.book.description}</dd>
+              <dt>Comments:</dt>
+              <dd>{this.state.book.publisher}</dd>
             </dl>
             <Link to={`/edit/${this.state.book._id}`} class="btn btn-success">Edit</Link>&nbsp;
+            {/* <Link to={`/edit/${this.state.book._id}`} class="btn btn-primary">Add a Comment</Link>&nbsp; */}
             <button onClick={this.delete.bind(this, this.state.book._id)} class="btn btn-danger">Delete</button>
           </div>
         </div>

@@ -12,7 +12,7 @@ class Create extends Component {
       title: '',
       author: '',
       description: '',
-      
+      publisher: ''
     };
   }
   onChange = (e) => {
@@ -24,16 +24,16 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { isbn, title, author, description} = this.state;
+    const { isbn, title, author, description,publisher} = this.state;
 
-    axios.post('/api/book', { isbn, title, author, description })
+    axios.post('/api/book', { isbn, title, author, description,publisher })
       .then((result) => {
         this.props.history.push("/")
       });
   }
 
   render() {
-    const { isbn, title, author, description } = this.state;
+    const { isbn, title, author, description,publisher } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -60,6 +60,10 @@ class Create extends Component {
               <div class="form-group">
                 <label for="description">Description:</label>
                 <textArea class="form-control" rows="11" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="11">{description}</textArea>
+              </div>
+              <div class="form-group">
+                <label for="publisher">Comments:</label>
+                <textArea type="text" class="form-control" rows="6" name="publisher" value={publisher} onChange={this.onChange} placeholder="Comments" cols="40" rows="6"></textArea>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
