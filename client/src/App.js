@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Header from "./components/Header";
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div class="container">
+        <Header />
         <div class="panel panel-default">
           <div class="panel-heading">
             <a aria-label="Left Align">

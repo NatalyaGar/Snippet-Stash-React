@@ -1,0 +1,28 @@
+/* * {
+    color: red !important;
+  } */
+
+.header-container {
+    background-color: #89C7CB;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: white;
+    margin: auto;
+    margin-left: 0px;
+    }
+
+.greeting {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.login-link {
+    margin-left: 30%;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
