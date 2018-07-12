@@ -12,7 +12,7 @@ class Create extends Component {
       title: '',
       author: '',
       description: '',
-      publisher: ''
+      comment: ''
     };
   }
   onChange = (e) => {
@@ -24,16 +24,16 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { category, title, author, description,publisher} = this.state;
+    const { category, title, author, description, comment } = this.state;
 
-    axios.post('/api/book', { category, title, author, description,publisher })
+    axios.post('/api/book', { category, title, author, description, comment })
       .then((result) => {
         this.props.history.push("/")
       });
   }
 
   render() {
-    const { category, title, author, description,publisher } = this.state;
+    const { category, title, author, description, comment } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -62,8 +62,8 @@ class Create extends Component {
                 <textArea class="form-control" rows="11" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="11">{description}</textArea>
               </div>
               <div class="form-group">
-                <label for="publisher">Comments:</label>
-                <textArea type="text" class="form-control" rows="6" name="publisher" value={publisher} onChange={this.onChange} placeholder="Comments" cols="40" rows="6"></textArea>
+                <label for="comment">Comment:</label>
+                <textArea type="text" class="form-control" rows="6" name="comment" value={comment} onChange={this.onChange} placeholder="Add a comment" cols="40" rows="6"></textArea>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>

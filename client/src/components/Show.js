@@ -45,8 +45,8 @@ class Show extends Component {
               <dd>{this.state.book.author}</dd>
               <dt>Description:</dt>
               <dd>{this.state.book.description}</dd>
-              <dt>Comments:</dt>
-              <dd>{this.state.book.publisher}</dd>
+              <dt>Comment:</dt>
+              <dd>{this.state.book.comment}</dd>
             </dl>
             <Link to={`/edit/${this.state.book._id}`} class="btn btn-success">Edit</Link>&nbsp;
             {/* <Link to={`/edit/${this.state.book._id}`} class="btn btn-primary">Add a Comment</Link>&nbsp; */}
