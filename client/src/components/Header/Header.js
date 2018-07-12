@@ -3,9 +3,12 @@ import "./Header.css";
 import { Glyphicon, Navbar } from 'react-bootstrap';
 import Headroom from 'react-headroom';
 
-
+const user = {
+    _id: '12345',
+    name: 'Melissa',
+    isLoggedIn: true
+}
 const name = "Melissa";
-const username = "LadyCoder";
 
 
 //TODO: if user is logged in, pass in name instead of Guest
@@ -18,7 +21,8 @@ const Header = props => (
                 <h1 className="snippet-brand" href="#">
                     <Glyphicon glyph="scissors" /> SNIPPETstash </h1>
                 <p className="greeting welcome-message"> Welcome
-                <span> {name}</span>
+                <span> {user.isLoggedIn ? user.name : 'Guest'} </span>
+                    {/* <span> {name}</span> */}
                     {/* <span> Guest </span> */}
                 </p>
                 <p className="header-link">
