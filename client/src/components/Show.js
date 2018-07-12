@@ -40,7 +40,7 @@ class Show extends Component {
             <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List </Link></h4>
             <dl>
               <dt>CATEGORY:</dt>
-              <dd>{this.state.book.isbn}</dd>
+              <dd>{this.state.book.category}</dd>
               <dt>Author:</dt>
               <dd>{this.state.book.author}</dd>
               <dt>Description:</dt>

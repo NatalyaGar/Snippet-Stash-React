@@ -8,7 +8,7 @@ class Create extends Component {
   constructor() {
     super();
     this.state = {
-      isbn: '',
+      category: '',
       title: '',
       author: '',
       description: '',
@@ -24,16 +24,16 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { isbn, title, author, description,publisher} = this.state;
+    const { category, title, author, description,publisher} = this.state;
 
-    axios.post('/api/book', { isbn, title, author, description,publisher })
+    axios.post('/api/book', { category, title, author, description,publisher })
       .then((result) => {
         this.props.history.push("/")
       });
   }
 
   render() {
-    const { isbn, title, author, description,publisher } = this.state;
+    const { category, title, author, description,publisher } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -46,8 +46,8 @@ class Create extends Component {
             <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="isbn">CATEGORY:</label>
-                <input type="text" class="form-control" name="isbn" value={isbn} onChange={this.onChange} placeholder="CATEGORY" />
+                <label for="category">CATEGORY:</label>
+                <input type="text" class="form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
               </div>
               <div class="form-group">
                 <label for="title">Title:</label>

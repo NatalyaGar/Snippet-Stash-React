@@ -42,7 +42,7 @@ class App extends Component {
                 <table class="table table-stripe">
                   <thead>
                     <tr>
-                      {/* <th>ISBN</th> */}
+                      {/* <th>category</th> */}
                       <th>Category</th>
                       <th>Title</th>
                       <th>Author</th>
@@ -51,7 +51,7 @@ class App extends Component {
                   <tbody>
                     {this.state.books.map(book =>
                       <tr>
-                        <td><Link to={`/show/${book._id}`}>{book.isbn}</Link></td>
+                        <td><Link to={`/show/${book._id}`}>{book.category}</Link></td>
                         <td>{book.title}</td>
                         <td>{book.author}</td>
                       </tr>
