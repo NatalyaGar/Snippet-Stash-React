@@ -23,7 +23,7 @@ class App extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div>
         <Header />
         <div class="panel panel-default">
           <div class="panel-heading">

@@ -1,9 +1,13 @@
 /* * {
-    color: red !important;
+    border: solid .5px red !important;
   } */
 
 .header-container {
     background-color: #89C7CB;
+}
+
+#navbar-background {
+    background-color: purple;
 }
 
 .navbar-brand {
@@ -15,14 +19,28 @@
 
 .greeting {
     color: white;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 600;
-    margin-right: auto;
+    margin-y: auto;
 }
 
-.login-link {
-    margin-left: 30%;
+.header-link a {
+    margin-y: auto;
+    margin-left: 20px;
+    padding: 0 0 0 0px;
     color: white;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 600;
+}
+
+.snippet-brand {
+    display: inline-block;
+    color: white;
+    padding: 9px 15px 0px 0px;
+    margin-y: auto;
+    float: left;
+}
+
+.welcome-message {
+    color: white;
 }
