@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var BookSchema = new mongoose.Schema({
+var SnippetSchema = new mongoose.Schema({
   category: String,
   title: String,
   author: String,
@@ -9,4 +9,4 @@ var BookSchema = new mongoose.Schema({
   updated_date: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model('Snippet', SnippetSchema);

@@ -26,7 +26,7 @@ class Create extends Component {
 
     const { category, title, author, description, comment } = this.state;
 
-    axios.post('/api/book', { category, title, author, description, comment })
+    axios.post('/api/snippet', { category, title, author, description, comment })
       .then((result) => {
         this.props.history.push("/")
       });
