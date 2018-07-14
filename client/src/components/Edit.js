@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CodeMirror from './CodeMirror';
+
 
 class Edit extends Component {
 
@@ -62,7 +64,7 @@ class Edit extends Component {
               </div>
               <div class="form-group">
                 <label for="description">Description:</label>
-                <input type="text" rows="11" class="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" />
+                <CodeMirror type="text" rows="11" class="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" />
               </div>
               <div class="form-group">
                 <label for="comment">Comments:</label>

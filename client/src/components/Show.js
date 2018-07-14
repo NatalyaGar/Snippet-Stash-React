@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CodeMirror from './CodeMirror';
+
 
 class Show extends Component {
 

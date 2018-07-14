@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CodeMirror from './CodeMirror';
+
 
 class Create extends Component {
 
@@ -59,7 +61,8 @@ class Create extends Component {
               </div>
               <div class="form-group">
                 <label for="description">Description:</label>
-                <textArea class="form-control" rows="11" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="11">{description}</textArea>
+                {/* <CodeMirror name="description" onChange={this.onChange} >{description} </CodeMirror> */}
+                <CodeMirror name="description" onChange={this.onChange} ></CodeMirror>
               </div>
               <div class="form-group">
                 <label for="comment">Comment:</label>
