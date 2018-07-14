@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import CodeMirror from 'react-codemirror';
+import {UnControlled as CodeMirror} from 'react-codemirror2'
+// import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
+
 
 class Editor extends Component {
     constructor(props) {
@@ -24,7 +26,7 @@ class Editor extends Component {
     render() {
         return (
             <CodeMirror 
-                value={ this.state.code }
+                value={ this.props.description }
                 onChange={ this.props.onChange }
                 options={ this.options }
             />

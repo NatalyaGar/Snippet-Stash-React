@@ -68,8 +68,7 @@ class Create extends Component {
               </div>
               <div class="form-group">
                 <label for="description">Description:</label>
-                {/* <CodeMirror name="description" onChange={this.onChange} >{description} </CodeMirror> */}
-                <CodeMirror name="description" description="{this.state.code}"onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                <CodeMirror name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
               </div>
               <div class="form-group">
                 <label for="comment">Comment:</label>
