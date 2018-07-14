@@ -27,6 +27,17 @@ class Edit extends Component {
     this.setState({snippet:state});
   }
 
+  // onChange = (e) => {
+  //   const state = this.state
+  //   state[e.target.name] = e.target.value;
+  //   this.setState(state);
+  // }
+
+
+  updateCode = (code) => {
+    this.setState({description: code});
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -64,7 +75,7 @@ class Edit extends Component {
               </div>
               <div class="form-group">
                 <label for="description">Description:</label>
-                <CodeMirror type="text" rows="11" class="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" />
+                <CodeMirror name="description" description="{this.state.code}"onChange={(code) => this.updateCode(code)} ></CodeMirror>
               </div>
               <div class="form-group">
                 <label for="comment">Comments:</label>

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css";
-import { Glyphicon, } from 'react-bootstrap';
+// import { Glyphicon, } from 'react-bootstrap';
 import Headroom from 'react-headroom';
 
 const user = {
@@ -18,7 +18,8 @@ const Header = props => (
             <div className="row">
                 {/* <button classname="hamburger"> <Glyphicon glyph="glyphicon glyphicon-menu-hamburger" /> </button> */}
                 <h1 className="snippet-brand" href="/">
-                    <Glyphicon glyph="scissors" /> SNIPPETstash </h1>
+                <span class="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
+                    SNIPPETstash </h1>
                 <p className="greeting welcome-message"> Welcome
                 <span> {user.isLoggedIn ? user.name : 'Guest'} </span>
                     {/* <span> {name}</span> */}

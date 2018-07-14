@@ -18,13 +18,14 @@ class Editor extends Component {
 
     updateCode = (newCode) => {
         this.setState({ code: newCode }, () => console.log(this.state));
+        // this.props.onChange({code: newCode})
     }
 
     render() {
         return (
             <CodeMirror 
                 value={ this.state.code }
-                onChange={ this.updateCode }
+                onChange={ this.props.onChange }
                 options={ this.options }
             />
         );
