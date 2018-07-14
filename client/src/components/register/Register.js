@@ -1,9 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
-// import RegisterForm from "./RegisterForm";
+import { BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
 // import PageSwitcher from "./PageSwitcher";
-import SignUpForm from "./pages/SignUpForm";
-// import SignInForm from ".Routes/SignInForm";
+import RegisterForm from "./RegisterForm";
+import SignInForm from "./SignInForm";
 import "./RegisterPage.css";
 
 
@@ -19,19 +18,22 @@ class RegisterPage extends React.Component {
                 <div className= "Register__Form">
                     
                     <div className= "PageSwitcher">
-                        <a href= "#" className= "PageSwitcher__Item"> Sign In </a>
-                        <a href= "#" className= "PageSwitcher__Item--Active"> Sign Up </a>
+                        <NavLink to= "/sign-in" activeClassName="PageSwitcher__Item--Active"
+                         className= "PageSwitcher__Item"> Sign In </NavLink>
+                        <NavLink exact to= "/" activeClassName="PageSwitcher__Item--Active" 
+                        className= "PageSwitcher__Item"> Sign Up </NavLink>
                     </div>
 
     
                     <div className="FormTitle">
 
-                        <Link to="sign-in" className= "FormTitle--Link"> Sign in </Link> or 
-                        <a href="#" className= "FormTitle__Link FormTitle__Link--Active"> Sign Up </a>
+                        <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign in </NavLink> or 
+                        <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
                 
                     </div>
 
-                    <Route exact path= "/" component= {SignUpForm}>
+                    <Route exact path= "/" component= {RegisterForm}>
+                    
                     <div className= "FormCenter">
                         <form className="FormFields" onSubmit={this.handleSubmit}>
 
@@ -53,14 +55,14 @@ class RegisterPage extends React.Component {
                             
                             <div className="FormField">
                                 <button className= "FormField__Button mr-20">Sign Up</button>
-                                <a href= "#" className= "FormField__Link"> I'm already a member</a>
+                                <Link to= "/" className= "FormField__Link"> I'm already a member</Link>
                             </div>
 
                          </form>   
 
                     </div>
                     </Route>
-                    <Route path= "/sign-in">
+                    <Route path= "/sign-in" component={SignInForm}>
                         <h1>Sign In</h1>
                     </Route>
                 </div>

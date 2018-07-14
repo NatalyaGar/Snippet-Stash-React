@@ -1,80 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
+import {Link} from "react-router-dom";
 
-class RegisterForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: "",
-            email: "",
-            password: "",
-            passwordConfirmation: "",
-        }
-
-        this.onChange = this.onChange.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-    }
-
-    onChange(e) {
-        this.setState({ [e.target.name]: e.target.value});
-    }
-
-    onSubmit(e) {
-        e.preventDefault();
-        console.log(this.state);
-    }
+class RegisterForm extends Component {
 
     render(){
         return (
-            <form onSubmit = {this.onSubmit}>
-                <h1> Save your snippet stash and register!</h1>
+            <div className= "FormCenter">
+            <form className="FormFields" onSubmit={this.handleSubmit}>
 
-                <div className= "form-group">
-                    <label className= "control-label"> Username</label>
-                    <input
-                        value= {this.state.username}
-                        onChange = {this.onChange}
-                        type= "text"
-                        name= "username"
-                        className= "form-control" />
-                </div>  
+                <div className="FormField">
+                    <label className= "FormField__Label" htmlFor="name">Full Name</label>
+                    <input type="text" id="name" className= "FormField__Input" placeholder="Enter Your Full Name" name="name"/>
+                </div>
 
-                 <div className= "form-group">
-                    <label className= "control-label"> Email</label>
-                    <input
-                        value= {this.state.email}
-                        onChange = {this.onChange}
-                        type= "text"
-                        name= "email"
-                        className= "form-control" />
-                </div>  
+                <div className="FormField">
+                    <label className= "FormField__Label" htmlFor="name">Email</label>
+                    <input type="email" id="email" className= "FormField__Input" placeholder="Enter Your email" name="email"/>
+                </div>
 
-                 <div className= "form-group">
-                    <label className= "control-label"> Password</label>
-                    <input
-                        value= {this.state.password}
-                        onChange = {this.onChange}
-                        type= "password"
-                        name= "password"
-                        className= "form-control" />
-                </div>  
+                <div className="FormField">
+                    <label className= "FormField__Label" htmlFor="name">Password</label>
+                    <input type="password" id="password" className= "FormField__Input" placeholder="Enter Your Password" name="password"/>
+                </div>
 
                 
-                <div className= "form-group">
-                    <label className= "control-label"> Password Confirmation</label>
-                    <input
-                        value= {this.state.passwordConfirmation}
-                        onChange = {this.onChange}
-                        type= "password"
-                        name= "passwordConfirmation"
-                        className= "form-control" />
-                </div>  
-
-                <div className= "form-group">
-                    <button className= "btn btn-primary btn-lg">
-                        Sign up
-                    </button>
+                <div className="FormField">
+                    <button className= "FormField__Button mr-20">Sign Up</button>
+                    <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
                 </div>
-            </form>
+            
+             </form>   
+            </div>
         );
     }
 }
