@@ -20,7 +20,7 @@ class RegisterPage extends React.Component {
                     <div className= "PageSwitcher">
                         <NavLink to= "/sign-in" activeClassName="PageSwitcher__Item--Active"
                          className= "PageSwitcher__Item"> Sign In </NavLink>
-                        <NavLink exact to= "/" activeClassName="PageSwitcher__Item--Active" 
+                        <NavLink exact to= "/register" activeClassName="PageSwitcher__Item--Active" 
                         className= "PageSwitcher__Item"> Sign Up </NavLink>
                     </div>
 
@@ -28,11 +28,11 @@ class RegisterPage extends React.Component {
                     <div className="FormTitle">
 
                         <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign In </NavLink> or 
-                        <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
+                        <NavLink to="/register" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
                 
                     </div>
 
-                    <Route exact path= "/" component= {RegisterForm}>
+                    <Route path= "/register" component= {RegisterForm}>
                     
                     <div className= "FormCenter">
                         <form className="FormFields" onSubmit={this.handleSubmit}>
@@ -55,7 +55,7 @@ class RegisterPage extends React.Component {
                             
                             <div className="FormField">
                                 <button className= "FormField__Button mr-20">Sign Up</button>
-                                <Link to= "/" className= "FormField__Link"> I'm already a member</Link>
+                                <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
                             </div>
 
                          </form>   

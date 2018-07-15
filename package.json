@@ -5,8 +5,8 @@
   "scripts": {
     "heroku-prebuild": "rm -rf public/ && mkdir public",
     "heroku-postbuild": "cd client && npm i && npm run build",
-    "start": "node app.js",
-    "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\""
+    "start": "nodemon app.js",
+    "dev": "concurrently \"node app.js\" \"cd client && yarn start\""
   },
   "dependencies": {
     "axios": "^0.17.0",
@@ -21,10 +21,10 @@
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
     "react-bootstrap": "^0.32.1",
-    "react-router-dom": "^4.3.1",
+    "react-headroom": "^2.2.2",
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.1.2"
   }
 }

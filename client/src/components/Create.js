@@ -8,11 +8,11 @@ class Create extends Component {
   constructor() {
     super();
     this.state = {
-      isbn: '',
+      category: '',
       title: '',
       author: '',
       description: '',
-      
+      comment: ''
     };
   }
   onChange = (e) => {
@@ -24,16 +24,16 @@ class Create extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { isbn, title, author, description} = this.state;
+    const { category, title, author, description, comment } = this.state;
 
-    axios.post('/api/book', { isbn, title, author, description })
+    axios.post('/api/snippet', { category, title, author, description, comment })
       .then((result) => {
         this.props.history.push("/")
       });
   }
 
   render() {
-    const { isbn, title, author, description } = this.state;
+    const { category, title, author, description, comment } = this.state;
     return (
       <div class="container">
         <div class="panel panel-default">
@@ -46,8 +46,8 @@ class Create extends Component {
             <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="isbn">CATEGORY:</label>
-                <input type="text" class="form-control" name="isbn" value={isbn} onChange={this.onChange} placeholder="CATEGORY" />
+                <label for="category">CATEGORY:</label>
+                <input type="text" class="form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
               </div>
               <div class="form-group">
                 <label for="title">Title:</label>
@@ -60,6 +60,10 @@ class Create extends Component {
               <div class="form-group">
                 <label for="description">Description:</label>
                 <textArea class="form-control" rows="11" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="11">{description}</textArea>
+              </div>
+              <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textArea type="text" class="form-control" rows="6" name="comment" value={comment} onChange={this.onChange} placeholder="Add a comment" cols="40" rows="6"></textArea>
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
