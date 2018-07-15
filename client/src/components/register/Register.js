@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, NavLink} from "react-router-dom";
+import { BrowserRouter as Router, Route,Link, NavLink} from "react-router-dom";
 // import PageSwitcher from "./PageSwitcher";
 import RegisterForm from "./RegisterForm";
 import SignInForm from "./SignInForm";
@@ -27,7 +27,7 @@ class RegisterPage extends React.Component {
     
                     <div className="FormTitle">
 
-                        <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign in </NavLink> or 
+                        <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign In </NavLink> or 
                         <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
                 
                     </div>

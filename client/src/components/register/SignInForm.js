@@ -6,18 +6,19 @@ class SignInForm extends React.Component {
         super();
         
         this.state = {
-            email: "",
-            password:"",
+            email: " ",
+            password:" ",
         };
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(e) {
         let target = e.target;
+        let value = target.type === "checkbox" ? target.checked : target.value;
         let name = target.name;
 
         this.setState({
-           // [name]: value
-        })
+           [name]: value
+        });
 
     }
 
@@ -41,7 +42,7 @@ class SignInForm extends React.Component {
                             
                             <div className="FormField">
                                 <button className= "FormField__Button mr-20">Sign In</button>
-                                <Link to= "/sign-in" className= "FormField__Link"> Create an Account</Link>
+                                <Link to= "/" className= "FormField__Link"> Create an Account</Link>
                             </div>
 
                          </form>   
