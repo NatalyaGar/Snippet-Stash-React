@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import {UnControlled as CodeMirror} from 'react-codemirror2'
-// import CodeMirror from 'react-codemirror';
+// import {UnControlled as CodeMirror} from 'react-codemirror2'
+import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/theme/cobalt.css';
+
 
 
 class Editor extends Component {
@@ -14,6 +17,8 @@ class Editor extends Component {
 
         this.options = {
             lineNumbers: true,
+            theme: 'cobalt',
+            mode: 'javascript'
         }
 
     }
