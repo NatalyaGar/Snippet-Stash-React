@@ -31,15 +31,15 @@ class Show extends Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
+      <div className="container">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">
               {this.state.snippet.title}
             </h3>
           </div>
-          <div class="panel-body">
-            <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List </Link></h4>
+          <div className="panel-body">
+            <h4><Link to="/"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List </Link></h4>
             <dl>
               <dt>CATEGORY:</dt>
               <dd>{this.state.snippet.category}</dd>
@@ -50,9 +50,9 @@ class Show extends Component {
               <dt>Comment:</dt>
               <dd>{this.state.snippet.comment}</dd>
             </dl>
-            <Link to={`/edit/${this.state.snippet._id}`} class="btn btn-success">Edit</Link>&nbsp;
-            {/* <Link to={`/edit/${this.state.snippet._id}`} class="btn btn-primary">Add a Comment</Link>&nbsp; */}
-            <button onClick={this.delete.bind(this, this.state.snippet._id)} class="btn btn-danger">Delete</button>
+            <Link to={`/edit/${this.state.snippet._id}`} className="btn btn-success">Edit</Link>&nbsp;
+            {/* <Link to={`/edit/${this.state.snippet._id}`} className="btn btn-primary">Add a Comment</Link>&nbsp; */}
+            <button onClick={this.delete.bind(this, this.state.snippet._id)} className="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>
