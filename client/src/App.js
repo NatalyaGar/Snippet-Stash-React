@@ -19,7 +19,7 @@ class App extends Component {
     axios.get('/api/snippet')
       .then(res => {
         this.setState({ snippets: res.data });
-        console.log(this.state.snippets);
+        // console.log(this.state.snippets);
       });
   }
 
@@ -51,8 +51,8 @@ class App extends Component {
                   <tbody>
                     {this.state.snippets.map(snippet =>
                       <tr>
-                        <td><Link to={`/show/${snippet._id}`}>{snippet.category}</Link></td>
-                        <td>{snippet.title}</td>
+                        <td>{snippet.category}</td>
+                        <td><Link to={`/show/${snippet._id}`}>{snippet.title}</Link></td>
                         <td>{snippet.author}</td>
                       </tr>
                     )}

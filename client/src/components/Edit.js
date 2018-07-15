@@ -4,20 +4,28 @@ import { Link } from 'react-router-dom';
 import CodeMirror from './CodeMirror';
 import Editor from './CodeMirror';
 
+
+let previousDescription = "Bug ALERT: Click the back button on your browser and then click edit again";
+
 class Edit extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      snippet: {}
+      snippet: {
+        description: previousDescription,
+      }
     };
   }
 
+  
   componentDidMount() {
     axios.get('/api/snippet/'+this.props.match.params.id)
       .then(res => {
         this.setState({ snippet: res.data });
         console.log(this.state.snippet);
+        console.log(this.state.snippet.description);
+        previousDescription = this.state.snippet.description
       });
   }
 
@@ -35,7 +43,10 @@ class Edit extends Component {
 
 
   updateCode = (code) => {
-    this.setState({snippet: {...this.state.snippet, description: code}});
+    this.setState({snippet: {
+      ...this.state.snippet, 
+      description: code,
+    }});
   }
 
   onSubmit = (e) => {
@@ -75,7 +86,7 @@ class Edit extends Component {
               </div>
               <div className="form-group">
                 <label htmlFor="description">Description:</label>
-                <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                <CodeMirror name="description" value={this.state.snippet.description} description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
                 {/* <input type="text" rows="11" className="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" /> */}
               </div>
               <div className="form-group">
