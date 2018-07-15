@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import CodeMirror from './CodeMirror';
+import Editor from './CodeMirror';
 
 class Edit extends Component {
 
@@ -25,6 +27,17 @@ class Edit extends Component {
     this.setState({snippet:state});
   }
 
+  // onChange = (e) => {
+  //   const state = this.state
+  //   state[e.target.name] = e.target.value;
+  //   this.setState(state);
+  // }
+
+
+  updateCode = (code) => {
+    this.setState({snippet: {...this.state.snippet, description: code}});
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -38,37 +51,38 @@ class Edit extends Component {
 
   render() {
     return (
-      <div class="container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">
+      <div className="container">
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">
               EDIT SNIPPET
             </h3>
           </div>
-          <div class="panel-body">
-            <h4><Link to={`/show/${this.state.snippet._id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Snippet List</Link></h4>
+          <div className="panel-body">
+            <h4><Link to={`/show/${this.state.snippet._id}`}><span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Snippet List</Link></h4>
             <form onSubmit={this.onSubmit}>
-              <div class="form-group">
-                <label for="category">CATEGORY</label>
-                <input type="text" class="form-control" name="category" value={this.state.snippet.category} onChange={this.onChange} placeholder="CATEGORY" />
+              <div className="form-group">
+                <label htmlFor="category">CATEGORY</label>
+                <input type="text" className="form-control" name="category" value={this.state.snippet.category} onChange={this.onChange} placeholder="CATEGORY" />
               </div>
-              <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" class="form-control" name="title" value={this.state.snippet.title} onChange={this.onChange} placeholder="Title" />
+              <div className="form-group">
+                <label htmlFor="title">Title:</label>
+                <input type="text" className="form-control" name="title" value={this.state.snippet.title} onChange={this.onChange} placeholder="Title" />
               </div>
-              <div class="form-group">
-                <label for="author">Author:</label>
-                <input type="text" class="form-control" name="author" value={this.state.snippet.author} onChange={this.onChange} placeholder="Author" />
+              <div className="form-group">
+                <label htmlFor="author">Author:</label>
+                <input type="text" className="form-control" name="author" value={this.state.snippet.author} onChange={this.onChange} placeholder="Author" />
               </div>
-              <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" rows="11" class="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" />
+              <div className="form-group">
+                <label htmlFor="description">Description:</label>
+                <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                {/* <input type="text" rows="11" className="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" /> */}
               </div>
-              <div class="form-group">
-                <label for="comment">Comments:</label>
-                <input type="text" class="form-control" name="comment" value={this.state.snippet.comment} onChange={this.onChange} placeholder="Comments" />
+              <div className="form-group">
+                <label htmlFor="comment">Comments:</label>
+                <input type="text" className="form-control" name="comment" value={this.state.snippet.comment} onChange={this.onChange} placeholder="Comments" />
               </div>
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" className="btn btn-default">Submit</button>
             </form>
           </div>
         </div>

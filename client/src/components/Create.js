@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+  import CodeMirror from './CodeMirror';
+import Editor from './CodeMirror';
+
 
 class Create extends Component {
 
@@ -21,6 +24,10 @@ class Create extends Component {
     this.setState(state);
   }
 
+  updateCode = (code) => {
+    this.setState({description: code});
+  }
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -31,6 +38,8 @@ class Create extends Component {
         this.props.history.push("/")
       });
   }
+
+  
 
   render() {
     const { category, title, author, description, comment } = this.state;
@@ -59,7 +68,7 @@ class Create extends Component {
               </div>
               <div class="form-group">
                 <label for="description">Description:</label>
-                <textArea class="form-control" rows="11" name="description" onChange={this.onChange} placeholder="Description" cols="80" rows="11">{description}</textArea>
+                <CodeMirror name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
               </div>
               <div class="form-group">
                 <label for="comment">Comment:</label>
