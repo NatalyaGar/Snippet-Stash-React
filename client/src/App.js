@@ -30,16 +30,16 @@ class App extends Component {
         <div className="row">
           <CategoryBar />
           <div className="col-10">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-              <h3 class="panel-title" >
+            <div className="panel panel-default">
+              <div className="panel-heading">
+              <h3 className="panel-title" >
                 <a aria-label="Left Align">
-                  <span class="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
+                  <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
                 </a>  SNIPPET CATALOG </h3>
               </div>
-              <div class="panel-body">
-                <h4><Link to="/create"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add A New Snippet</Link></h4>
-                <table class="table table-stripe">
+              <div className="panel-body">
+                <h4><Link to="/create"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add A New Snippet</Link></h4>
+                <table className="table table-stripe">
                   <thead>
                     <tr>
                       {/* <th>category</th> */}
@@ -58,7 +58,6 @@ class App extends Component {
                     )}
                   </tbody>
                 </table>
-                {/* <CodeMirror /> */}
               </div>
             </div>
           </div>

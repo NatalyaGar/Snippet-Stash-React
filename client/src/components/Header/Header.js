@@ -18,7 +18,7 @@ const Header = props => (
             <div className="row">
                 {/* <button classname="hamburger"> <Glyphicon glyph="glyphicon glyphicon-menu-hamburger" /> </button> */}
                 <h1 className="snippet-brand" href="/">
-                <span class="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
+                <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
                     SNIPPETstash </h1>
                 <p className="greeting welcome-message"> Welcome
                 <span> {user.isLoggedIn ? user.name : 'Guest'} </span>
