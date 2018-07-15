@@ -12,16 +12,16 @@ class Show extends Component {
   }
 
   componentDidMount() {
-    axios.get('/api/snippet/'+this.props.match.params.id)
+    axios.get('/api/snippet/' + this.props.match.params.id)
       .then(res => {
         this.setState({ snippet: res.data });
         console.log(this.state.snippet);
       });
   }
 
-  delete(id){
+  delete(id) {
     console.log(id);
-    axios.delete('/api/snippet/'+id)
+    axios.delete('/api/snippet/' + id)
       .then((result) => {
         this.props.history.push("/")
       });
@@ -44,7 +44,10 @@ class Show extends Component {
               <dt>Author:</dt>
               <dd>{this.state.snippet.author}</dd>
               <dt>Description:</dt>
-              <dd>{this.state.snippet.description}</dd>
+              <dd>
+                <textarea type="text" rows='11' cols="100" value={this.state.snippet.description} >
+                </textarea>
+              </dd>
               <dt>Comment:</dt>
               <dd>{this.state.snippet.comment}</dd>
             </dl>
