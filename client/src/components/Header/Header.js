@@ -2,7 +2,7 @@ import React from 'react';
 import "./Header.css";
 // import { Glyphicon, } from 'react-bootstrap';
 import Headroom from 'react-headroom';
-
+// import "./Register.js"
 const user = {
     _id: '12345',
     name: 'Melissa',
@@ -26,7 +26,7 @@ const Header = props => (
                     {/* <span> Guest </span> */}
                 </p>
                 <p className="header-link">
-                    <a className="nav-link" href="/">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
+                    <a className="nav-link" href="/register">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
                 </p>
             </div>
         </div>
