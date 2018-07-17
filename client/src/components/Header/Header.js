@@ -45,7 +45,7 @@ const Header = props => (
                     SNIPPETstash </h1>
                 <p className="greeting welcome-message"> 
                 
-                <span> <Greeting isLoggedIn={true} />,
+                <span> <Greeting isLoggedIn={true} />
                     {/* {user.isLoggedIn ? user.name : 'Guest'}  */}
                     </span>
                     {/* <span> {name}</span> */}
