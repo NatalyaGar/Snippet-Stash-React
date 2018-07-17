@@ -26,7 +26,7 @@ const Header = props => (
                     {/* <span> Guest </span> */}
                 </p>
                 <p className="header-link">
-                    <a className="nav-link" href="#">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
+                    <a className="nav-link" href="/register">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
                 </p>
             </div>
         </div>
