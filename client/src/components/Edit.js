@@ -80,8 +80,8 @@ class Edit extends Component {
               <div className="form-group">
                 <label htmlFor="description">Description:</label>
                 {this.state.snippet.description
-                  ? <CodeMirror name="description" value={this.state.snippet.description} description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
-                  : null
+                  ? <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                  : " Sorry, you cannnot delete everything in the description box. Please refresh the page and try your edit again."
                 }
                 {/* <input type="text" rows="11" className="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" /> */}
               </div>
