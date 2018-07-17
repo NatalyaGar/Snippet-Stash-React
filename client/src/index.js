@@ -10,6 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
+import Register from './components/register/Register';
+
 
 ReactDOM.render(
   <Router>
@@ -18,6 +20,8 @@ ReactDOM.render(
         <Route path='/edit/:id' component={Edit} />
         <Route path='/create' component={Create} />
         <Route path='/show/:id' component={Show} />
+        <Route path= '/register' component= {Register}/>
+                
       </div>
   </Router>,
   document.getElementById('root')

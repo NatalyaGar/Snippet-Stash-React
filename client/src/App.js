@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from "./components/Header";
 import CategoryBar from './components/CategoryBar';
-
-// import CodeMirror from './components/CodeMirror';
+import CodeMirror from './components/CodeMirror';
 
 class App extends Component {
 
@@ -16,13 +15,13 @@ class App extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   axios.get('/api/snippets')
-  //     .then(res => {
-  //       this.setState({ snippets: res.data });
-  //       console.log(this.state.snippets);
-  //     });
-  // }
+  componentDidMount() {
+    axios.get('/api/snippet')
+      .then(res => {
+        this.setState({ snippets: res.data });
+        // console.log(this.state.snippets);
+      });
+  }
 
   render() {
     return (
@@ -53,14 +52,13 @@ class App extends Component {
                   <tbody>
                     {this.state.snippets.map(snippet =>
                       <tr>
-                        <td><Link to={`/show/${snippet._id}`}>{snippet.category}</Link></td>
-                        <td>{snippet.title}</td>
+                        <td>{snippet.category}</td>
+                        <td><Link to={`/show/${snippet._id}`}>{snippet.title}</Link></td>
                         <td>{snippet.author}</td>
                       </tr>
                     )}
                   </tbody>
                 </table>
-                {/* <CodeMirror /> */}
               </div>
             </div>
           </div>

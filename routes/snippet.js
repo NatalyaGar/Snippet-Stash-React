@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Book = require('../models/Book.js');
+var Snippet = require('../models/Snippet.js');
 
 /* GET ALL SNIPPETS */
 router.get('/', function(req, res, next) {
-  Book.find(function (err, products) {
+  Snippet.find(function (err, products) {
     if (err) return next(err);
     res.json(products);
   });
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 
 /* GET SINGLE SNIPPET BY ID */
 router.get('/:id', function(req, res, next) {
-  Book.findById(req.params.id, function (err, post) {
+  Snippet.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -21,7 +21,7 @@ router.get('/:id', function(req, res, next) {
 
 /* SAVE SNIPPET */
 router.post('/', function(req, res, next) {
-  Book.create(req.body, function (err, post) {
+  Snippet.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
 
 /* UPDATE SNIPPET */
 router.put('/:id', function(req, res, next) {
-  Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Snippet.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -37,7 +37,7 @@ router.put('/:id', function(req, res, next) {
 
 /* DELETE SNIPPET */
 router.delete('/:id', function(req, res, next) {
-  Book.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Snippet.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });

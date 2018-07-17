@@ -11,7 +11,7 @@ class CategoryBar extends Component {
         this.state = {
             categories: [],
         };
-      }
+    }
 
     componentDidMount(){
         axios.get('/api/categories')

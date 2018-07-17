@@ -12,13 +12,12 @@ mongoose.Promise = require('bluebird');
 // .then(() =>  console.log('connection succesful'))
 // .catch((err) => console.error(err));
 
-var book = require('./routes/book');
+var snippet = require('./routes/snippet');
 var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
-// app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/api/book', book);
