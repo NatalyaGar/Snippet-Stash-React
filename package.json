@@ -5,8 +5,8 @@
   "scripts": {
     "heroku-prebuild": "rm -rf public/ && mkdir public",
     "heroku-postbuild": "cd client && npm i && npm run build",
-    "start": "node server.js",
-    "dev": "concurrently \"./node_modules/nodemon/bin/nodemon.js server.js\" \"cd client && yarn start\""
+    "start": "node app.js",
+    "dev": "concurrently \"./node_modules/nodemon/bin/nodemon.js app.js\" \"cd client && yarn start\""
   },
   "dependencies": {
     "bluebird": "^3.5.1",

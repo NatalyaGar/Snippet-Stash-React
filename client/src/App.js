@@ -16,13 +16,13 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    axios.get('/api/snippet')
-      .then(res => {
-        this.setState({ snippets: res.data });
-        console.log(this.state.snippets);
-      });
-  }
+  // componentDidMount() {
+  //   axios.get('/api/snippets')
+  //     .then(res => {
+  //       this.setState({ snippets: res.data });
+  //       console.log(this.state.snippets);
+  //     });
+  // }
 
   render() {
     return (

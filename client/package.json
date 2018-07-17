@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "proxy": {
-    "api": {
+    "/api": {
       "target": "http://localhost:3004",
       "secure": false
     }

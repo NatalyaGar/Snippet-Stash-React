@@ -1,9 +1,12 @@
 var db = require('../models');
 
 /* GET ALL SNIPPETS */
-function readAll (req, res, next) {
-    db.Category.find(function (err, categories) {
-      if (err) return next(err);
+function readAll (req, res) {
+    db.Category.find({}, function (err, categories) {
+      if (err) {
+          return console.log(err);
+      }
+      console.log('Categories from db: ', categories);
       res.json(categories);
     });
 }
