@@ -5,10 +5,11 @@
   "scripts": {
     "heroku-prebuild": "rm -rf public/ && mkdir public",
     "heroku-postbuild": "cd client && npm i && npm run build",
-    "start": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"node app.js\" \"cd client && yarn start\""
+    "start": "node app.js",
+    "dev": "concurrently \"./node_modules/nodemon/bin/nodemon.js app.js\" \"cd client && yarn start\""
   },
   "dependencies": {
+    "bootstrap": "^4.1.2",
     "axios": "^0.17.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
@@ -18,9 +19,10 @@
     "debug": "~2.6.9",
     "express": "^4.16.2",
     "http-errors": "~1.6.2",
-    "mongoose": "^4.12.4",
+    "mongoose": "^4.13.14",
     "morgan": "~1.9.0",
-    
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "^2.4.5",
     "react-bootstrap": "^0.32.1",
     "react-codemirror": "^1.0.0",
     "react-codemirror2": "^5.1.0",
@@ -28,6 +30,7 @@
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
-    "bootstrap": "^4.1.2"
-  }
+    "nodemon": "^1.18.2"
+
+}
 }

@@ -28,7 +28,8 @@ class App extends Component {
       <div>
         <Header />
         <div className="row">
-          <CategoryBar />
+            <CategoryBar />
+              
           <div className="col-10">
             <div className="panel panel-default">
               <div className="panel-heading">
@@ -67,5 +68,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
