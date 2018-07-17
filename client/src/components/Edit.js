@@ -8,16 +8,9 @@ import Editor from './CodeMirror';
 let previousDescription = "Bug ALERT: Click the back button on your browser and then click edit again";
 
 class Edit extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      snippet: {
-        description: previousDescription,
-      }
-    };
+  state = {
+    snippet: {}
   }
-
   
   componentDidMount() {
     axios.get('/api/snippet/'+this.props.match.params.id)
@@ -86,7 +79,10 @@ class Edit extends Component {
               </div>
               <div className="form-group">
                 <label htmlFor="description">Description:</label>
-                <CodeMirror name="description" value={this.state.snippet.description} description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                {this.state.snippet.description
+                  ? <CodeMirror name="description" value={this.state.snippet.description} description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                  : null
+                }
                 {/* <input type="text" rows="11" className="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" /> */}
               </div>
               <div className="form-group">
