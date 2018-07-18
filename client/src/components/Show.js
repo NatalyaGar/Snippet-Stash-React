@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Clipboard from 'react-clipboard.js';
+
+// class MyView extends Component {
+//   render() {
+//     return (
+//       <Clipboard component="a" button-href="#" data-clipboard-text={this.state.snippet.description}>
+//         copy to clipboard
+//       </Clipboard>
+//     );
+//   }
+// }
 
 class Show extends Component {
 
@@ -37,7 +48,7 @@ class Show extends Component {
             </h3>
           </div>
           <div className="panel-body">
-            <h4><Link to="/"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List </Link></h4>
+            <h4><Link to="/"><span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back to Snippet List </Link></h4>
             <dl>
               <dt>CATEGORY:</dt>
               <dd>{this.state.snippet.category}</dd>
@@ -45,9 +56,16 @@ class Show extends Component {
               <dd>{this.state.snippet.author}</dd>
               <dt>Description:</dt>
               <dd>
-                <textarea type="text" rows='11' cols="100" value={this.state.snippet.description} >
+                <textarea id="codeDescription" type="text" rows='11' cols="100" value={this.state.snippet.description} >
                 </textarea>
               </dd>
+              
+              <button type="button" className="btn btn-secondary clipboardBtn"><span>
+              <Clipboard component="a"  data-clipboard-text={this.state.snippet.description} button-title="Click to copy the entire code"> 
+                copy to clipboard
+              </Clipboard></span> </button>
+
+              {/* <button type="button" className="btn btn-secondary">Copy the Code</button> */}
               <dt>Comment:</dt>
               <dd>{this.state.snippet.comment}</dd>
             </dl>

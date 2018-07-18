@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-  import CodeMirror from './CodeMirror';
-import Editor from './CodeMirror';
+import CodeMirror from './CodeMirror';
+// import Editor from './CodeMirror';
 
 
 class Create extends Component {
@@ -25,7 +25,7 @@ class Create extends Component {
   }
 
   updateCode = (code) => {
-    this.setState({description: code});
+    this.setState({ description: code });
   }
 
   onSubmit = (e) => {
@@ -39,10 +39,10 @@ class Create extends Component {
       });
   }
 
-  
+
 
   render() {
-    const { category, title, author, description, comment } = this.state;
+    const { category, title, author, comment } = this.state;
     return (
       <div className="container">
         <div className="panel panel-default">
@@ -72,7 +72,7 @@ class Create extends Component {
               </div>
               <div className="form-group">
                 <label htmlFor="comment">Comment:</label>
-                <textarea type="text" className="form-control" rows="6" name="comment" value={comment} onChange={this.onChange} placeholder="Add a comment" cols="40" rows="6"></textarea>
+                <textarea type="text" className="form-control" name="comment" value={comment} onChange={this.onChange} placeholder="(Optional) Add a comment" cols="40" rows="6"></textarea>
               </div>
               <button type="submit" className="btn btn-default">Submit</button>
             </form>

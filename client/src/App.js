@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from "./components/Header";
 import CategoryBar from './components/CategoryBar';
-import CodeMirror from './components/CodeMirror';
+// import CodeMirror from './components/CodeMirror';
 
 class App extends Component {
 
