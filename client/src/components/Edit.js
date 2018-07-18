@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CodeMirror from './CodeMirror';
-import Editor from './CodeMirror';
 
 
-let previousDescription = "Bug ALERT: Click the back button on your browser and then click edit again";
+
+// let previousDescription;
 
 class Edit extends Component {
   state = {
@@ -18,7 +18,7 @@ class Edit extends Component {
         this.setState({ snippet: res.data });
         console.log(this.state.snippet);
         console.log(this.state.snippet.description);
-        previousDescription = this.state.snippet.description
+        // previousDescription = this.state.snippet.description
       });
   }
 
@@ -63,7 +63,7 @@ class Edit extends Component {
             </h3>
           </div>
           <div className="panel-body">
-            <h4><Link to={`/show/${this.state.snippet._id}`}><span className="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Snippet List</Link></h4>
+            <h4><Link to={`/show/${this.state.snippet._id}`}><span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back To Snippet</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label htmlFor="category">CATEGORY</label>

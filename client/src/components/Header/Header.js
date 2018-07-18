@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css";
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import { Glyphicon, } from 'react-bootstrap';
 import Headroom from 'react-headroom';
 // import "./Register.js"
