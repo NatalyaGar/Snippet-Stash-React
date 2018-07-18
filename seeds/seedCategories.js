@@ -1,19 +1,25 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/snippetstash");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern-crud");
 const Category = require('../models/category');
 mongoose.Promise = Promise;
 
 const categoryList = [
-    { item: 'CSS' },
     { item: 'AJAX' },
+    { item: 'CSS' },
+    { item: 'Express' },
     { item: 'Firebase' },
+    { item: 'Handlebars' },
+    { item: 'HTML' },
     { item: 'JavaScript' },
     { item: 'jQuery' },
-    { item: 'HTML' },
+    { item: 'MongoDB' },
+    { item: 'Mongoose' },
+    { item: 'MySQL' },
+    { item: 'Node' },
     { item: 'React' },
     { item: 'Sequelize' },
-    { item: 'Mongoose' },
-    { item: 'Express' }
+    { item: 'Testing' },
+
 ];
 
 Category.deleteMany({})

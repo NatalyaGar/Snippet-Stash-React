@@ -1,6 +1,6 @@
 var db = require('../models');
 
-/* GET ALL SNIPPETS */
+/* GET ALL CATEGORIES */
 function readAll (req, res) {
     db.Category.find({}, function (err, categories) {
       if (err) {
