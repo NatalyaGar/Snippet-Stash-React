@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "proxy": {
+    "/api": {
+      "target": "localhost:3004",
+      "secure": false
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
