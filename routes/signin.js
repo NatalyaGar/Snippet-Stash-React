@@ -3,7 +3,7 @@ module.exports = (register) => {}
 
   
   /* Sign Up */
-  router.post('/account/signup', function(req, res, next)  {
+  router.post('/sign-up', function(req, res, next)  {
     const { body } = req;
     const {
         firstName, 

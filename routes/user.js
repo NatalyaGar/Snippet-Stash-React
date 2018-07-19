@@ -1,55 +1,53 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
+
 //require User model in routes module
 var User = require('../models/User');
+/* Sign Up */
+router.post('/register', function(req, res, next)  {
+  const { body } = req;
+  const {
+      
+      email,
+      password,
+  } = body;
 
-// /* GET users listing. */
+  if (!email) {
+      res.end({
+          success: false,
+          message: "Error: Email cannot be blank."
+      });
+  }
 
-/* GET ALL User Info */
+  if (!password) {
+      res.end({
+          success: false,
+          message: "Error: Password cannot be blank."
+      });
+  }
+  email = email.toLowerCase();
 
-router.get('/add/post').post(function(req, res) {
-  var user= new User(req.body);
-    user.save()
-    .then(item => {
-      res.json("User added successfully");
-    })
-    .catch(err => {
-      res.status(400).send("unable to save to database");
-    });
-  });
+  //Steps:
+  //1. Verify email doesn't exist
+  //2. Save
+  User.find ({
+      email: email
+  }), (err, previousUsers) =>{
+      if (err) {
+          res.end({
+              success:false,
+              message:"Error: Server Error"
+          });
+      }   else if (previousUsers.length > 0) {
 
-/* GET SINGLE User BY ID */
-router.get('/register:id', function(req, res, next) {
-  User.findById(req.params.id, function (err, post) {
-    if (err) return next(err);
-    res.json(post);
-  });
-});
+          res.end({
+              success:true,
+              message:"Error: Account already exists"
+          });
+      }   
+  }
+})
 
-/* SAVE User */
-router.post('/register', function(req, res, next) {
-  User.create(req.body, function (err, post) {
-    if (err) return next(err);
-    res.json(post);
-  });
-});
-
-/* UPDATE User */
-router.put('/register:id', function(req, res, next) {
-  User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
-    if (err) return next(err);
-    res.json(post);
-  });
-});
-
-/* DELETE User */
-router.delete('/register:id', function(req, res, next) {
-  User.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-    if (err) return next(err);
-    res.json(post);
-  });
-});
 
 
 

@@ -9,13 +9,13 @@ class RegisterForm extends Component {
             <form className="FormFields" onSubmit={this.handleSubmit} action="/register" method= "post">
 
                 <div className="FormField">
-                    <label className= "FormField__Label" htmlFor="name">First Name</label>
-                    <input type="text" id="name" className= "FormField__Input" placeholder="Enter Your First Name" name="firstName"/>
+                    <label className= "FormField__Label" htmlFor="firstName">First Name</label>
+                    <input type="text" id="nfirstName" className= "FormField__Input" placeholder="Enter Your First Name" name="firstName"/>
                 </div>
 
                 <div className="FormField">
-                    <label className= "FormField__Label" htmlFor="name">Last Name</label>
-                    <input type="text" id="name" className= "FormField__Input" placeholder="Enter Your Last Name" name="LastName"/>
+                    <label className= "FormField__Label" htmlFor="firstName">Last Name</label>
+                    <input type="text" id="lastName" className= "FormField__Input" placeholder="Enter Your Last Name" name="LastName"/>
                 </div>
 
                 <div className="FormField">
