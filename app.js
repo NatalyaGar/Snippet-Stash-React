@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes');
 
+
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/mern-crud', { useMongoClient: true, promiseLibrary: require('bluebird') })
 .then(() =>  console.log('connection succesful'))
@@ -17,6 +18,8 @@ mongoose.connect('mongodb://localhost/mern-crud', { useMongoClient: true, promis
 // Requiring the `User` model for accessing the 'snippets' and `users` collection
 var snippet = require('./routes/snippet');
 var user = require("./routes/user");
+var signin = require("./routes/signin");
+
 
 // Initialize Express
 var app = express();
@@ -32,8 +35,10 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/api/book', book);
+
 app.use('/api/snippet', snippet);
+app.use('/api/user', user);
+app.use('/api/signin', signin);
 
 // Add routes, both API and view
 app.use(routes);

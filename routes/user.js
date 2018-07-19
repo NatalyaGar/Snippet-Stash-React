@@ -1,8 +1,17 @@
 var express = require('express');
 var router = express.Router();
-
+var mongoose = require('mongoose');
 //require User model in routes module
 var User = require('../models/User');
+
+/* GET ALL Users */
+router.get('/register', function(req, res, next) {
+    User.find(function (err, email) {
+      if (err) return next(err);
+      res.json(email);
+    });
+  });
+  
 /* Sign Up */
 router.post('/register', function(req, res, next)  {
   const { body } = req;
