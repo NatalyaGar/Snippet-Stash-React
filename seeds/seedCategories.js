@@ -8,6 +8,7 @@ const categoryList = [
     { item: 'AJAX' },
     { item: 'Firebase' },
     { item: 'JavaScript' },
+    { item: 'MySQL' },
     { item: 'jQuery' },
     { item: 'HTML' },
     { item: 'React' },
