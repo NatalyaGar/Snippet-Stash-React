@@ -6,6 +6,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
+var routes = require('./routes');
+
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/mern-crud', { useMongoClient: true, promiseLibrary: require('bluebird') })
 .then(() =>  console.log('connection succesful'))
@@ -19,7 +22,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// app.use('/api/book', book);
 app.use('/api/snippet', snippet);
+
+// Add routes, both API and view
+app.use(routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
