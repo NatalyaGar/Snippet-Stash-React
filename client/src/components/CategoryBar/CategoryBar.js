@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import "./CategoryBar.css";
+import { Glyphicon, Button } from 'react-bootstrap';
 
 
 class CategoryBar extends Component {
@@ -28,7 +29,9 @@ class CategoryBar extends Component {
             <div className="col-2">
                 <ul>
                     { categories.map((category, index) => (
-                        <li key={category._id}>{category.item}</li>
+                        <li>
+                        <btn key={category._id}>{category.item}</btn>
+                        </li>
                     ))}
                 </ul>
             </div>

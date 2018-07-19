@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Clipboard from 'react-clipboard.js';
+// import Clipboard from 'react-clipboard.js';
 
 // class MyView extends Component {
 //   render() {
@@ -60,10 +60,10 @@ class Show extends Component {
                 </textarea>
               </dd>
               
-              <button type="button" className="btn btn-secondary clipboardBtn"><span>
+              {/* <button type="button" className="btn btn-secondary clipboardBtn"><span>
               <Clipboard component="a"  data-clipboard-text={this.state.snippet.description} button-title="Click to copy the entire code"> 
                 copy to clipboard
-              </Clipboard></span> </button>
+              </Clipboard></span> </button> */}
 
               {/* <button type="button" className="btn btn-secondary">Copy the Code</button> */}
               <dt>Comment:</dt>

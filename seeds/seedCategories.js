@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/snippetstash");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern-crud");
 const Category = require('../models/category');
 mongoose.Promise = Promise;
 
