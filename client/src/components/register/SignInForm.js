@@ -31,7 +31,7 @@ class SignInForm extends React.Component {
         
             axios.post('/api/signin', { email, password })
               .then((result) => {
-                this.props.history.push("/signin")
+                // this.props.history.push("/signin")
               });
         //   }
 

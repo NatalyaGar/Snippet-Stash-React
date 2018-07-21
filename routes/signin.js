@@ -5,10 +5,6 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-
-
-module.exports = (register) => {} 
-
 /* GET ALL Users */
 router.get('/register', function(req, res, next) {
     User.find(function (err, email) {
@@ -28,6 +24,7 @@ router.get('/:id', function(req, res, next) {
   
   /* Sign Up */
   router.post('/sign-up', function(req, res, next)  {
+    console.log('sign-up hit');
     const { body } = req;
     const {
         firstName, 
@@ -62,7 +59,7 @@ router.get('/:id', function(req, res, next) {
             message: "Error: Password cannot be blank."
         });
     }
-    email = email.toLowerCase();
+    email = email.toLowerCase(); 
 
     //Steps:
     //1. Verify email doesn't exist
@@ -105,7 +102,9 @@ router.get('/:id', function(req, res, next) {
             };
         })
     }
-  })
+  });
+
+  module.exports = router;
 
 
   

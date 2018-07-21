@@ -22,34 +22,34 @@ router.post('/register', function(req, res, next)  {
   } = body;
 
   if (!email) {
-      res.end({
+      return res.json({
           success: false,
           message: "Error: Email cannot be blank."
       });
   }
 
   if (!password) {
-      res.end({
+     return res.json({
           success: false,
           message: "Error: Password cannot be blank."
       });
   }
   email = email.toLowerCase();
 
+  User.find ({
   //Steps:
   //1. Verify email doesn't exist
   //2. Save
-  User.find ({
       email: email
   }), (err, previousUsers) =>{
       if (err) {
-          res.end({
+         return res.json({
               success:false,
               message:"Error: Server Error"
           });
       }   else if (previousUsers.length > 0) {
 
-          res.end({
+          return res.json({
               success:true,
               message:"Error: Account already exists"
           });

@@ -6,7 +6,7 @@ class RegisterForm extends Component {
     constructor() {
         super();
         this.state = {
-            firstName: '',
+          firstName: '',
           lastName:'',
           emal: '',
           password:'',
@@ -27,10 +27,19 @@ class RegisterForm extends Component {
         e.preventDefault();
     
         const { firstName,lastName, email,password} = this.state;
-        axios.post('/api/signin/sign-up', { firstName,lastName, email,password })
+        axios.post('/api/signin/sign-up', { 
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: password
+        })
           .then((result) => {
             // this.props.history.push("/")
-          });
+            console.log(result);
+          })
+          .catch((error) => {
+            console.log(error);
+          })
       }
     
 
