@@ -27,7 +27,8 @@ class RegisterForm extends Component {
         e.preventDefault();
     
         const { firstName,lastName, email,password} = this.state;
-        axios.post('/api/signin/sign-up', { 
+        // axios.post('/api/signin/sign-up', { 
+            axios.post('/api/user/register', { 
             firstName: firstName,
             lastName: lastName,
             email: email,
@@ -35,6 +36,8 @@ class RegisterForm extends Component {
         })
           .then((result) => {
             // this.props.history.push("/")
+            // <type="submit" className= "FormField__Button mr-20" href="/">
+            result.redirect('/')
             console.log(result);
           })
           .catch((error) => {
