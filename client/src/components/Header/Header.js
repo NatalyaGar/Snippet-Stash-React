@@ -7,7 +7,7 @@ import Headroom from 'react-headroom';
 const user = {
     _id: '12345',
     name: 'Melissa',
-    
+
 }
 
 function UserGreeting(props) {
@@ -33,29 +33,51 @@ function Greeting(props) {
 // );
 
 
-//TODO: if user is logged in, pass in name instead of Guest
+//TODO: if user is logged in, 
 //AND:    Change "Sign Out" to "Sign In"
 const Header = props => (
     <Headroom>
-        <div className="nav header-container">
+        <nav>
+            <ul>
+                <li><a href=""><span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>SNIPPETstash </a></li>
+                <li><a href="">
+                    Welcome {user.name ? 'Back ' + user.name : 'Guest'}
+                </a></li>
+                <li><a href="/register">{user.name ? 'Log Out': 'Log In'}</a></li>
+            </ul>
+        </nav>
+
+
+
+        {/* <div className="nav header-container">
             <div className="row">
-                {/* <button classname="hamburger"> <Glyphicon glyph="glyphicon glyphicon-menu-hamburger" /> </button> */}
+
                 <h1 className="snippet-brand" href="/">
                     <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
                     SNIPPETstash </h1>
                 <p className="greeting welcome-message"> 
                 
-                <span> <Greeting isLoggedIn={true} />
-                    {/* {user.isLoggedIn ? user.name : 'Guest'}  */}
-                    </span>
-                    {/* <span> {name}</span> */}
-                    {/* <span> Guest </span> */}
-                </p>
+                <span> <Greeting isLoggedIn={true} /> */}
+
+        {/* ----- commented out ----- */}
+        {/* {user.isLoggedIn ? user.name : 'Guest'}  */}
+        {/* ----- /commented out ----- */}
+
+        {/* </span> */}
+
+        {/* ----- commented out ----- */}
+        {/* <span> {name}</span> */}
+        {/* <span> Guest </span> */}
+        {/* ----- /commented out ----- */}
+
+
+        {/* </p>
                 <p className="header-link">
                     <a className="nav-link" href="/register">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
                 </p>
             </div>
-        </div>
+        </div> */}
+
     </Headroom>
 );
 
