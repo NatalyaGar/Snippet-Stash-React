@@ -28,7 +28,9 @@ class App extends Component {
       <div>
         <Header />
         <div className="row" id="wrapper">
+
             <CategoryBar />
+        </div>
               
           <div className="col-10">
             <div className="panel panel-default">
