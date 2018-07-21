@@ -51,7 +51,7 @@ class CategoryBar extends Component {
                      </li>
                      <li className="mySnippets">
                          <button className="snippetsButton">
-                         <h4><a href="#"><i class="fa fa-heart fa-fw"></i> My Snippets</a></h4>
+                         <h4><a href="#"><i className="fa fa-heart fa-fw"></i> My Snippets</a></h4>
                          </button>
                      </li>
                  <NavItem className="navItem">
