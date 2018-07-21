@@ -1,64 +1,56 @@
-import React from 'react';
-import "./Header.css";
-// import ReactDOM from 'react-dom';
-// import { Glyphicon, } from 'react-bootstrap';
+import React, { Component } from 'react';
 import Headroom from 'react-headroom';
-// import "./Register.js"
-const user = {
-    _id: '12345',
-    name: 'Melissa',
-    
-}
+import "./Header.css";
+import axios from 'axios';
 
-function UserGreeting(props) {
-    return <h1>Welcome Back {user.name}</h1>;
-}
+// class User extends Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             _id: '12345',
+//             name: 'Melissa',
+//         };
+//     }
 
-function GuestGreeting(props) {
-    return <h1>Welcome Guest</h1>;
-}
+//     componentDidMount() {
+//         axios.get('/api/user/:id')
+//             .then(response => {
+//                 const { data } = response;
+//                 this.setState({ categories: data }, () => console.log(this.state));
+//                 console.log(data);
+//             })
+//             .catch(error => console.log(error));
+//     }
+// }
 
-function Greeting(props) {
-    const isLoggedIn = props.isLoggedIn;
-    if (isLoggedIn) {
-        return <UserGreeting />;
+
+
+        const user = {
+        _id: '12345',
+        name: 'Melissa',
+
     }
-    return <GuestGreeting />;
-}
 
-// ReactDOM.render(
-//     // Try changing to isLoggedIn={true}:
-//     <Greeting isLoggedIn={false} />,
-//     document.getElementById('root')
-// );
-
-
-//TODO: if user is logged in, pass in name instead of Guest
-//AND:    Change "Sign Out" to "Sign In"
-const Header = props => (
-    <Headroom>
-        <div className="nav header-container">
-            <div className="row">
-                {/* <button classname="hamburger"> <Glyphicon glyph="glyphicon glyphicon-menu-hamburger" /> </button> */}
-                <h1 className="snippet-brand" href="/">
-                    <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
-                    SNIPPETstash </h1>
-                <p className="greeting welcome-message"> 
-                
-                <span> <Greeting isLoggedIn={true} />
-                    {/* {user.isLoggedIn ? user.name : 'Guest'}  */}
-                    </span>
-                    {/* <span> {name}</span> */}
-                    {/* <span> Guest </span> */}
-                </p>
-                <p className="header-link">
-                    <a className="nav-link" href="/register">{user.isLoggedIn ? 'Sign Out' : 'Sign In'}</a>
-                </p>
-            </div>
-        </div>
-    </Headroom>
-);
+    //TODO: if user is logged in, display their name, if not display guest
+    //AND:    Change "Sign Out" to "Sign In"
+    const Header = props => (
+        <Headroom>
+            <nav>
+                <ul>
+                    <li><a href="" className="font1"><i className="fas fa-cut"></i> SNIPPETstash </a></li>
+                    <li><a href="" className="font2">
+                        Welcome {user.name ? 'Back ' + user.name : 'Guest'}
+                    </a></li>
+                    <li><a href="/register" className="font1">{user.name ? 'Log Out' : 'Log In'}</a></li>
+                </ul>
+            </nav>
 
 
 
-export default Header
+
+        </Headroom>
+    );
+
+
+
+    export default Header

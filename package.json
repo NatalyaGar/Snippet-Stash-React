@@ -5,8 +5,8 @@
   "scripts": {
     "heroku-prebuild": "rm -rf public/ && mkdir public",
     "heroku-postbuild": "cd client && npm i && npm run build",
-    "start": "node app.js",
-    "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\""
+    "start": "nodemon app.js",
+    "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\" \"cd seeds && node seedCategories.js\""
   },
   "dependencies": {
     "axios": "^0.17.0",

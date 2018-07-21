@@ -1,87 +1,60 @@
-const User = require("../models/User");
-module.exports = (register) => {} 
+var express = require('express');
+var router = express.Router();
+var mongoose = require('mongoose');
+//require User model in routes module
+var User = require('../models/User');
 
+/* GET ALL Users */
+router.get('/sign-in', function(req, res, next) {
+    User.find(function (err, email) {
+      if (err) return next(err);
+      res.json(email);
+    });
+  });
   
-  /* Sign Up */
-  router.post('/sign-up', function(req, res, next)  {
-    const { body } = req;
-    const {
-        firstName, 
-        lastName,
-        email,
-        password,
-    } = body;
+/* Sign Up */
+router.post('/sign-in', function(req, res, next)  {
+  const { body } = req;
+  const {
+      email,
+      password,
+  } = body;
 
-    if (!firstName) {
-        res.end({
-            success: false,
-            message: "Error: First name cannot be blank."
-        });
-    }
+  if (!email) {
+      return res.json({
+          success: false,
+          message: "Error: Email cannot be blank."
+      });
+  }
 
-    if (!lastName) {
-        res.end({
-            success: false,
-            message: "Error: Last name cannot be blank."
-        });
-    }
-    if (!email) {
-        res.end({
-            success: false,
-            message: "Error: Email cannot be blank."
-        });
-    }
+  if (!password) {
+     return res.json({
+          success: false,
+          message: "Error: Password cannot be blank."
+      });
+  }
+  email = email.toLowerCase();
 
-    if (!password) {
-        res.end({
-            success: false,
-            message: "Error: Password cannot be blank."
-        });
-    }
-    email = email.toLowerCase();
+  User.find ({
+  //Steps:
+  //1. Verify email doesn't exist
+  //2. Save
+      email: email
+  }), (err, previousUsers) =>{
+      if (err) {
+         return res.json({
+              success:false,
+              message:"Error: Server Error"
+          });
+      }   else if (previousUsers.length > 0) {
 
-    //Steps:
-    //1. Verify email doesn't exist
-    //2. Save
-    User.find ({
-        email: email
-    }), (err, previousUsers) =>{
-        if (err) {
-            res.end({
-                success:false,
-                message:"Error: Server Error"
-            });
-        }   else if (previousUsers.length > 0) {
-
-            res.end({
-                success:true,
-                message:"Error: Account already exists"
-            });
-        }   
-
-        //Save the new user
-        const newUser = new User ();
-
-        newUser.email = email;
-        newUser.firstName = firstName;
-        newUser.lastName= lastName;
-        newUser.password = newUser.generateHash(password);
-        newUser.save((err, user) =>{
-            if(err) {
-                res.end({
-                    success:false,
-                    message:"Error: Server Error"
-                });
-            }   else if (previousUsers.length > 0) {
-    
-                res.end({
-                    success: true,
-                    message:"Signed Up"
-                });
-            };
-        })
-    }
-  })
+          return res.json({
+              success:true,
+              message:"Error: Account already exists"
+          });
+      }   
+  }
+})
 
 
-  
+module.exports = router;

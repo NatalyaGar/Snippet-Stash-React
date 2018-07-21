@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from"react-router-dom";
 
@@ -22,6 +23,24 @@ class SignInForm extends React.Component {
            [name]: value
         });
 
+
+        // onSubmit = (e) => {
+        //     e.preventDefault();
+        
+            const {email,password } = this.state;
+        
+            axios.post('/api/signin/sign-in', { email, password })
+              .then((result) => {
+                // this.props.history.push("/signin")
+                console.log(result);
+            })
+            .catch((error) => {
+              console.log(error);
+            })
+        
+              
+        //   }
+
 //     componentsDidMount(){
 //     axios.post('/api/register')
 //       .then((response => {
@@ -32,7 +51,7 @@ class SignInForm extends React.Component {
 //       .catch(error => console,log(error));
    }
 
-    render(){
+    render() {
             // const { email, password } = this.state;
             return (
                     <div className= "FormCenter">
@@ -60,5 +79,6 @@ class SignInForm extends React.Component {
                 );
             }
         }
+    
 
 export default SignInForm;
