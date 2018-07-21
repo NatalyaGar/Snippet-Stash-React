@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div className="row">
+        <div className="row" id="wrapper">
             <CategoryBar />
               
           <div className="col-10">

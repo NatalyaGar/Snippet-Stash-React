@@ -1,7 +1,14 @@
 /* .App {
   text-align: center;
 }
+  */
+#wrapper {
+    width: 100%;
+    max-width: 968px;
+    margin: 0 auto;
+}
 
+/* 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
