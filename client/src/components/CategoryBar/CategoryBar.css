@@ -1,8 +1,70 @@
+* {
+    font-family: veranda;
+    margin: 0;
+}
+
 .col-2 {
-    margin-top: 10px;
+    padding-top: 5px;
 }
 
-.searchBtn {
-    background-color: #89C7CB;
+/* .mySnippets {
+    width: 150px;
+} */
+
+.snippetsButton {
+    width: 140px;
+    float: left;
+    margin-left: 0px;
+    border: none;
+    /* background-color: #2E4158; */
+    color: white;
 }
 
+#searchBtn {
+    background-color:  #2E4158;
+    color: white;
+    height: 33px;
+    width: auto;
+}
+
+#searchForm {
+    width: 100px;
+    float: left;
+    /* margin-left: 5px; */
+}
+
+.navBar {
+    /* background-color: #66DAC7; */
+    list-style-type: none;
+    float: left;
+    /* padding-right: 20px; */
+}
+
+.navLink {
+    
+}
+
+.navButton {
+    width: 140px;
+    float: left;
+    margin-left: 0;
+    border: none;
+    /* background-color: #66DAC7; */
+}
+
+.navLink a:hover {
+    background-color: white;
+}
+
+.navLink a:active {
+    background-color: #2E4158;
+    color: white;
+}
+
+@media screen and (min-width: 768px){
+    .navBar {
+        display: flex;
+        justify-content: left;
+        font-size: 25px;
+    }
+}

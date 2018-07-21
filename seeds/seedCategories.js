@@ -4,16 +4,27 @@ const Category = require('../models/category');
 mongoose.Promise = Promise;
 
 const categoryList = [
-    { item: 'CSS' },
     { item: 'AJAX' },
+    { item: 'CSS' },
+    { item: 'Express' },
     { item: 'Firebase' },
+    { item: 'Handlebars' },
+    { item: 'HTML' },
     { item: 'JavaScript' },
     { item: 'jQuery' },
-    { item: 'HTML' },
+    { item: 'MongoDB' },
+    { item: 'Mongoose' },
+    { item: 'MySQL' },
+    { item: 'Node' },
     { item: 'React' },
     { item: 'Sequelize' },
     { item: 'Mongoose' },
-    { item: 'Express' }
+    { item: 'Express' },
+    { item: 'MySQL' },
+    { item: 'MongoDB' },
+    { item: 'Node' },
+    { item: 'Handlebars' },
+    { item: 'Testing' },
 ];
 
 Category.deleteMany({})

@@ -28,15 +28,19 @@ class App extends Component {
       <div>
         <Header />
         <div className="row" id="wrapper">
+          <div className="col-2">
+
+
             <CategoryBar />
-              
+          </div>
+
           <div className="col-10">
             <div className="panel panel-default">
               <div className="panel-heading">
-              <h3 className="panel-title" >
-                <a aria-label="Left Align">
-                  <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
-                </a>  SNIPPET CATALOG </h3>
+                <h3 className="panel-title" >
+                  <a aria-label="Left Align">
+                    <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
+                  </a>  SNIPPET CATALOG </h3>
               </div>
               <div className="panel-body">
                 <h4><Link to="/create"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add A New Snippet</Link></h4>
@@ -62,9 +66,9 @@ class App extends Component {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
+
     );
   }
 }
