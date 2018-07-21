@@ -8,4 +8,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern-crud")
 module.exports = {
     Category: require('./Category'),
     Snippet: require('./Snippet'),
+    User: require('./User'),
 }
