@@ -15,7 +15,7 @@ router.get('/sign-in', function(req, res, next) {
 /* Sign Up */
 router.post('/sign-in', function(req, res, next)  {
   const { body } = req;
-  const {
+  let {
       email,
       password,
   } = body;
