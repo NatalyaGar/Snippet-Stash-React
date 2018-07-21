@@ -18,8 +18,13 @@ const categoryList = [
     { item: 'Node' },
     { item: 'React' },
     { item: 'Sequelize' },
+    { item: 'Mongoose' },
+    { item: 'Express' },
+    { item: 'MySQL' },
+    { item: 'MongoDB' },
+    { item: 'Node' },
+    { item: 'Handlebars' },
     { item: 'Testing' },
-
 ];
 
 Category.deleteMany({})

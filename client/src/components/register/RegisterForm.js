@@ -6,11 +6,16 @@ class RegisterForm extends Component {
     render(){
         return (
             <div className= "FormCenter">
-            <form className="FormFields" onSubmit={this.handleSubmit}>
+            <form className="FormFields" onSubmit={this.handleSubmit} action="/register" method= "post">
 
                 <div className="FormField">
-                    <label className= "FormField__Label" htmlFor="name">Full Name</label>
-                    <input type="text" id="name" className= "FormField__Input" placeholder="Enter Your Full Name" name="name"/>
+                    <label className= "FormField__Label" htmlFor="firstName">First Name</label>
+                    <input type="text" id="nfirstName" className= "FormField__Input" placeholder="Enter Your First Name" name="firstName"/>
+                </div>
+
+                <div className="FormField">
+                    <label className= "FormField__Label" htmlFor="firstName">Last Name</label>
+                    <input type="text" id="lastName" className= "FormField__Input" placeholder="Enter Your Last Name" name="LastName"/>
                 </div>
 
                 <div className="FormField">
