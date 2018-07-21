@@ -27,8 +27,7 @@ class RegisterForm extends Component {
         e.preventDefault();
     
         const { firstName,lastName, email,password} = this.state;
-        // axios.post('/api/signin/sign-up', { 
-            axios.post('/api/user/register', { 
+        axios.post('/api/register', { 
             firstName: firstName,
             lastName: lastName,
             email: email,
@@ -36,8 +35,6 @@ class RegisterForm extends Component {
         })
           .then((result) => {
             // this.props.history.push("/")
-            // <type="submit" className= "FormField__Button mr-20" href="/">
-            result.redirect('/')
             console.log(result);
           })
           .catch((error) => {
@@ -68,14 +65,15 @@ class RegisterForm extends Component {
                 </div>
 
                 <div className="FormField">
-                    <label className= "FormField__Label" htmlFor="name">Password</label>
+                    <label className htmlFor="name">Password</label>
                     <input onChange={this.onChange} type="password" id="password" className= "FormField__Input" placeholder="Enter Your Password" name="password"/>
                 </div>
 
                 
                 <div className="FormField">
-                    <button type="submit" className= "FormField__Button mr-20">Sign Up</button>
-                    <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
+                    <button type="submit" className= "FormField__Button mr-20">Submit</button>
+                    <Link to= "/" className= "FormField__Link"> I'm already a member</Link>
+                
                 </div>
             
              </form>   
