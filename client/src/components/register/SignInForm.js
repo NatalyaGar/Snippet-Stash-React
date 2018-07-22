@@ -3,43 +3,68 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from"react-router-dom";
 
-
-class SignInForm extends React.Component {
+class SignInForm extends Component {
     constructor() {
         super();
         this.state = {
             email: "",
             password:"",
         };
-        this.handleChange = this.handleChange.bind(this);
     }
-    handleChange(e) {
-        let target = e.target;//select target element (email and password input)
-        let value = target.type === "checkbox" ? target.checked : target.value;
-        let name = target.name;
+    onChange = (e) => {
+        this.setState({[e.target.name]: e.target.value}, () => console.log(this.state));
+      }
+      updateValue = (value) => {
+        this.setState({ name: value });
+      }
+    
+      onSubmit = (e) => {
+        
+        e.preventDefault();
 
-        //reset state (above0 every time there is a change
-        this.setState({
-           [name]: value
-        });
+        const { email,password } = this.state;
+        axios.post('/api/signin/sign-in', { 
+
+            email: email,
+            password: password
+        })
+          .then((result) => {
+            // this.props.history.push("/")
+            console.log(result);
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+      }
+    //     this.handleChange = this.handleChange.bind(this);
+    // }
+    // handleChange(e) {
+    //     let target = e.target;//select target element (email and password input)
+    //     let value = target.type === "checkbox" ? target.checked : target.value;
+    //     let name = target.name;
+
+    //     //reset state (above0 every time there is a change
+    //     this.setState({
+    //        [name]: value
+    //     });
 
 
         // onSubmit = (e) => {
         //     e.preventDefault();
         
-            const {email,password } = this.state;
+            // const {email,password } = this.state;
         
-            axios.post('/api/signin/sign-in', { email, password })
-              .then((result) => {
-                // this.props.history.push("/signin")
-                console.log(result);
-            })
-            .catch((error) => {
-              console.log(error);
-            })
+            // axios.post('/api/signin/sign-in', { email, password })
+            //   .then((result) => {
+            //     // this.props.history.push("/signin")
+            //     console.log(result);
+            // })
+            // .catch((error) => {
+            //   console.log(error);
+            // })
         
               
-        //   }
+       //}
 
 //     componentsDidMount(){
 //     axios.post('/api/register')
@@ -49,28 +74,28 @@ class SignInForm extends React.Component {
 //         console.log(data);
 //       })
 //       .catch(error => console,log(error));
-   }
+   //}
 
     render() {
             // const { email, password } = this.state;
             return (
                     <div className= "FormCenter">
-                        <form className="FormFields" onSubmit={this.handleSubmit}>
+                        <form className="FormFields" onSubmit= {(e) => this.onSubmit(e)}>
 
                             <div className="FormField">
                                 <label className= "FormField__Label" htmlFor="name">Email</label>
-                                <input type="email" id="email" className= "FormField__Input" placeholder="Enter Your email" name="email" value={this.state.email} onChange={this.handleChange}/>
+                                <input  type="email" id="email" className= "FormField__Input" placeholder="Enter Your email" name="email" value={this.state.email} onChange={this.onChange}/>
                             </div>
 
                             <div className="FormField">
                                 <label className= "FormField__Label" htmlFor="name">Password</label>
-                                <input type="password" id="password" className= "FormField__Input" placeholder="Enter Your Password" name="password" value={this.state.password} onChange={this.handleChange}/>
+                                <input type="password" id="password" className= "FormField__Input" placeholder="Enter Your Password" name="password" value={this.state.password} onChange={this.onChange}/>
                             </div>
 
                             
                             <div className="FormField">
-                                <button className= "FormField__Button mr-20" type= "button" onClick={()=> this.signUp()}>Sign In</button>
-                                <Link to= "/register" className= "FormField__Link"> Create an Account</Link>
+                                <button className= "FormField__Button mr-20" type= "submit">Submit</button>
+                                <Link to= "/" className= "FormField__Link"> Create an Account</Link>
                             </div>
 
                          </form>   

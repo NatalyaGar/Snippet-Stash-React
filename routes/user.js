@@ -6,12 +6,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 /* Go to main page */
-router.get('/register', function(req, res, next) {
-    User.find(function (err, email) {
-      if (err) return next(err);
-      res.json(email);
-    });
-  });
+// router.get('/register', function(req, res, next) {
+//     User.find(function (err, email) {
+//       if (err) return next(err);
+//       res.json(email);
+//     });
+//   });
   
 
   /* GET SINGLE USER BY ID */
@@ -62,7 +62,7 @@ router.get('/:id', function(req, res, next) {
     }
     email = email.toLowerCase(); 
 
-    console.log({ email: email })
+    // console.log({ email: email })
 
     //Steps:
     //1. Verify email doesn't exist
@@ -88,9 +88,10 @@ router.get('/:id', function(req, res, next) {
             console.log('Save User')
             const newUser = new db.User();
 
-            newUser.email = email;
+          
             newUser.firstName = firstName;
             newUser.lastName= lastName;
+            newUser.email = email;
             newUser.password = newUser.generateHash(password);
 
             console.log(newUser)
