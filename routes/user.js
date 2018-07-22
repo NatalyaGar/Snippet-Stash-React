@@ -25,7 +25,9 @@ router.get('/:id', function(req, res, next) {
   /* Sign Up */
 //   router.post('/sign-up', function(req, res, next)  {
     router.post('/register', function(req, res, next)  {
-    console.log('sign-up hit');
+    console.log('sign-up hit', req.body);
+
+
     const { body } = req;
     let {
         firstName, 
@@ -33,6 +35,23 @@ router.get('/:id', function(req, res, next) {
         email,
         password,
     } = body;
+
+
+//     db.User.create({
+//         firstName: req.body.firstName,
+//         lastName: req.body.lastName,
+//         email: req.body.email,
+//         password: req.body.password
+//     }).then(function (createdUser) {
+//         res.redirect(307, "/api/");
+//         // res.json({ createdUser: createdUser });
+//     }).catch(function (err) {
+//         console.log(err);
+//         res.status(409).json(err);
+//         // res.status(422).json(err.errors[0].message);
+//     });
+// });
+
 
     if (!firstName) {
         return res.json({
@@ -62,7 +81,7 @@ router.get('/:id', function(req, res, next) {
     }
     email = email.toLowerCase(); 
 
-    // console.log({ email: email })
+    console.log({ email: email })
 
     //Steps:
     //1. Verify email doesn't exist
@@ -133,7 +152,7 @@ router.get('/:id', function(req, res, next) {
     //         });
     //     }   
 
-    //     //Save the new user
+        // Save the new user
     //     
     // }
   });

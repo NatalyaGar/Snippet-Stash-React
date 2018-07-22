@@ -19,6 +19,10 @@ mongoose.connect('mongodb://localhost/mern-crud', { useMongoClient: true, promis
 // Initialize Express
 var app = express();
 var snippet = require('./routes/snippet');
+var user = require('./routes/user');
+var snippet = require('./routes/snippet');
+var signin = require('./routes/signin');
+
 
 
 // Initialize Express
@@ -33,8 +37,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/api/snippet', snippet);
-// app.use('/api/user', user);
-// app.use('/api/signin', signin);
+app.use('/api/user', user);
+app.use('/api/signin', signin);
 
 // Add routes, both API and view
 app.use(routes);
