@@ -29,6 +29,7 @@ class SignInForm extends Component {
             password: password
         })
           .then((result) => {
+            window.location.replace('/');
             // this.props.history.push("/")
             console.log(result);
           })
@@ -96,6 +97,10 @@ class SignInForm extends Component {
                             <div className="FormField">
                                 <button className= "FormField__Button mr-20" type= "submit">Submit</button>
                                 <Link to= "/register" className= "FormField__Link"> Create an Account</Link>
+                            </div>
+
+                             <div>
+                                  <a className="nav-link" href="/">{'Enter as a Guest Here'}</a>
                             </div>
 
                          </form>   

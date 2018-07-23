@@ -34,6 +34,7 @@ class RegisterForm extends Component {
             password: password
         })
           .then((result) => {
+            window.location.replace('/');
             // this.props.history.push("/")
             console.log(result);
             // result.redirect('/')
@@ -74,7 +75,10 @@ class RegisterForm extends Component {
                 <div className="FormField">
                     <button type="submit" className= "FormField__Button mr-20">Submit</button>
                     <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
-                
+                </div>
+
+                 <div>
+                   <a className="nav-link" href="/">{'Enter as a Guest Here'}</a>
                 </div>
             
              </form>   
