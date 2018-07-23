@@ -1,42 +1,42 @@
 // import React from "react";
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Link} from"react-router-dom";
+import { Link } from "react-router-dom";
 
 class SignInForm extends Component {
     constructor() {
         super();
         this.state = {
             email: "",
-            password:"",
+            password: "",
         };
     }
     onChange = (e) => {
-        this.setState({[e.target.name]: e.target.value}, () => console.log(this.state));
-      }
-      updateValue = (value) => {
+        this.setState({ [e.target.name]: e.target.value }, () => console.log(this.state));
+    }
+    updateValue = (value) => {
         this.setState({ name: value });
-      }
-    
-      onSubmit = (e) => {
-        
+    }
+
+    onSubmit = (e) => {
+
         e.preventDefault();
 
-        const { email,password } = this.state;
-        axios.post('/api/signin/sign-in', { 
+        const { email, password } = this.state;
+        axios.post('/api/signin/sign-in', {
 
             email: email,
             password: password
         })
-          .then((result) => {
-            window.location.replace('/');
-            // this.props.history.push("/")
-            console.log(result);
-          })
-          .catch((error) => {
-            console.log(error);
-          })
-      }
+            .then((result) => {
+                window.location.replace('/');
+                // this.props.history.push("/")
+                console.log(result);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
     //     this.handleChange = this.handleChange.bind(this);
     // }
     // handleChange(e) {
@@ -50,65 +50,62 @@ class SignInForm extends Component {
     //     });
 
 
-        // onSubmit = (e) => {
-        //     e.preventDefault();
-        
-            // const {email,password } = this.state;
-        
-            // axios.post('/api/signin/sign-in', { email, password })
-            //   .then((result) => {
-            //     // this.props.history.push("/signin")
-            //     console.log(result);
-            // })
-            // .catch((error) => {
-            //   console.log(error);
-            // })
-        
-              
-       //}
+    // onSubmit = (e) => {
+    //     e.preventDefault();
 
-//     componentsDidMount(){
-//     axios.post('/api/register')
-//       .then((response => {
-//         const {data} = response;
-//         this.setState({ user: data}, ()=> console.log(this.state));
-//         console.log(data);
-//       })
-//       .catch(error => console,log(error));
-   //}
+    // const {email,password } = this.state;
+
+    // axios.post('/api/signin/sign-in', { email, password })
+    //   .then((result) => {
+    //     // this.props.history.push("/signin")
+    //     console.log(result);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // })
+
+
+    //}
+
+    //     componentsDidMount(){
+    //     axios.post('/api/register')
+    //       .then((response => {
+    //         const {data} = response;
+    //         this.setState({ user: data}, ()=> console.log(this.state));
+    //         console.log(data);
+    //       })
+    //       .catch(error => console,log(error));
+    //}
 
     render() {
-            // const { email, password } = this.state;
-            return (
-                    <div className= "FormCenter">
-                        <form className="FormFields" onSubmit= {(e) => this.onSubmit(e)}>
+        // const { email, password } = this.state;
+        return (
+            <div className="FormCenter">
+                <form className="FormFields" onSubmit={(e) => this.onSubmit(e)}>
 
-                            <div className="FormField">
-                                <label className= "FormField__Label" htmlFor="name">Email</label>
-                                <input  type="email" id="email" className= "FormField__Input" placeholder="Enter Your email" name="email" value={this.state.email} onChange={this.onChange}/>
-                            </div>
-
-                            <div className="FormField">
-                                <label className= "FormField__Label" htmlFor="name">Password</label>
-                                <input type="password" id="password" className= "FormField__Input" placeholder="Enter Your Password" name="password" value={this.state.password} onChange={this.onChange}/>
-                            </div>
-
-                            
-                            <div className="FormField">
-                                <button className= "FormField__Button mr-20" type= "submit">Submit</button>
-                                <Link to= "/register" className= "FormField__Link"> Create an Account</Link>
-                            </div>
-
-                             <div>
-                                  <a className="nav-link" href="/">{'Enter as a Guest Here'}</a>
-                            </div>
-
-                         </form>   
-
+                    <div className="FormField">
+                        <label className="FormField__Label" htmlFor="name">Email</label>
+                        <input type="email" id="email" className="FormField__Input" placeholder="Enter Your email" name="email" value={this.state.email} onChange={this.onChange} />
                     </div>
-                );
-            }
-        }
-    
+
+                    <div className="FormField">
+                        <label className="FormField__Label" htmlFor="name">Password</label>
+                        <input type="password" id="password" className="FormField__Input" placeholder="Enter Your Password" name="password" value={this.state.password} onChange={this.onChange} />
+                    </div>
+
+
+                    <div className="FormField">
+                        <button className="FormField__Button mr-20" type="submit">Submit</button>
+                        <Link to="/register" className="FormField__Link"> Create an Account</Link>
+                        <a className="FormField__Link" href="/">{'Enter as a Guest Here'}</a>
+                    </div>
+
+                </form>
+
+            </div>
+        );
+    }
+}
+
 
 export default SignInForm;
