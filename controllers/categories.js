@@ -11,6 +11,20 @@ function readAll (req, res) {
     });
 }
 
+// //get one category by id
+// router.get("/api/categories/:CategoryId", function(req, res) {
+//     // Add sequelize code to find all Snippets where the category is equal to req.params.category,
+//     // return the result to the user with res.json
+//     db.Category.findOne({where: {
+//       id: req.params.CategoryId
+//     }}).then(function (dbCategory){
+//       res.json(dbCategory);
+//     });
+
+//   });
+
+
+
 function create(req, res) {
     console.log('CREATE HIT!');
 }

@@ -86,11 +86,22 @@ class RegisterForm extends Component {
                 <div className="FormField">
                     <button type="submit" className= "FormField__Button mr-20">Submit</button>
                     <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
-                
+                    {/* <Link to= "../" className= "FormField__Link"> Enter as a Guest Here </Link> */}
+                     
+                </div>
+
+                <div>
+                   <a className="nav-link" href="/">{'Enter as a Guest Here'}</a>
                 </div>
             
-             </form>   
+             </form> 
+               
+
+
+
             </div>
+
+                
         );
     }
 }

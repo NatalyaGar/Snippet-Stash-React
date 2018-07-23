@@ -99,6 +99,11 @@ class SignInForm extends Component {
                                 <Link to= "/register" className= "FormField__Link"> Create an Account</Link>
                             </div>
 
+                             <div>
+                                  <a className="nav-link" href="/">{'Enter as a Guest Here'}</a>
+                             </div>
+            
+
                          </form>   
 
                     </div>
