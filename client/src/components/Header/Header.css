@@ -1,20 +1,17 @@
 * {
-    font-family: veranda;
+    font-family: 'Lato', sans-serif;
     margin: 0;
 }
 
-body {
-    background: #eeee;
-}
 
 
 /* menu base styles */
-nav  {
+.navHeader  {
     background: #2E4158;
     font-size: 25px;
 }
 
-nav ul {
+.navUl {
     list-style-type: none;
     padding: 0;
 }
@@ -29,7 +26,7 @@ nav ul {
 
 
 
-nav a {
+.navA {
     text-decoration: none;
     text-align: center;
     color: #fff;
@@ -37,7 +34,7 @@ nav a {
     padding: 10px;
 }
 
-nav a:hover {
+.navA:hover {
     background: #555;
     text-decoration: none;
     color: #fff;
@@ -47,7 +44,7 @@ nav a:hover {
 /* flex styles */
 
 @media screen and (min-width: 768px){
-    nav ul {
+    .navUl {
         display: flex;
         justify-content: space-around;
         font-size: 25px;

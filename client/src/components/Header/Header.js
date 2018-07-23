@@ -27,7 +27,7 @@ import axios from 'axios';
 
         const user = {
         _id: '12345',
-        name: 'Melissa',
+        name: '',
 
     }
 
@@ -35,13 +35,13 @@ import axios from 'axios';
     //AND:    Change "Sign Out" to "Sign In"
     const Header = props => (
         <Headroom>
-            <nav>
-                <ul>
-                    <li><a href="" className="font1"><i className="fas fa-cut"></i> SNIPPETstash </a></li>
-                    <li><a href="" className="font2">
+            <nav className="navHeader">
+                <ul className="navUl">
+                    <li><a href="" className="navA font1"><i className="fas fa-cut"></i> SNIPPETstash </a></li>
+                    <li><a href="" className="navA font2">
                         Welcome {user.name ? 'Back ' + user.name : 'Guest'}
                     </a></li>
-                    <li><a href="/register" className="font1">{user.name ? 'Log Out' : 'Log In'}</a></li>
+                    <li><a href="/register" className="navA font1">{user.name ? 'Log Out' : 'Log In'}</a></li>
                 </ul>
             </nav>
 
