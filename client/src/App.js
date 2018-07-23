@@ -11,8 +11,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loggedIn: false,
+      user: null,
+      // {
+      //   firstName: 'Member',
+      //   email: 'email@email.com'
+      // },
       snippets: []
-    };
+    }
+
   }
 
   componentDidMount() {
@@ -21,12 +28,28 @@ class App extends Component {
         this.setState({ snippets: res.data });
         // console.log(this.state.snippets);
       });
+    axios.get('/auth/user').then(response => {
+      console.log(response.data)
+      if (!!response.data.user) {
+        console.log('THERE IS A USER')
+        this.setState({
+          loggedIn: true,
+          user: response.data.user
+        })
+      } else {
+        this.setState({
+          loggedIn: false,
+          user: null
+        })
+      }
+    })
   }
 
   render() {
     return (
       <div>
-        <Header />
+        <Header user={this.state.user} />
+
         <div className="row" id="wrapper">
           <div className="col-2">
 
