@@ -28,7 +28,7 @@ class App extends Component {
         this.setState({ snippets: res.data });
         // console.log(this.state.snippets);
       });
-    axios.get('/auth/user').then(response => {
+    axios.get('/api/sign-in').then(response => {
       console.log(response.data)
       if (!!response.data.user) {
         console.log('THERE IS A USER')

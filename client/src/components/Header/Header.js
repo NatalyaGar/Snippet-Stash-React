@@ -14,14 +14,14 @@ const Header = props => {
     let InOutLink
     if (props.user === null) {
         Greeting = <a href="" className="navA font2">Hello guest</a>
-        InOutLink = <a href="" className="navA font1">Sign In</a>
+        InOutLink = <a href="/register" className="navA font1">Sign In</a>
     } else if (props.user.firstName) {
         Greeting = (
             <a href="" className="navA font2">
                 Welcome Back {props.user.firstName}
             </a>
         )
-        InOutLink = <a href="" className="navA font1">Sign Out</a>
+        InOutLink = <a href="/register" className="navA font1">Sign Out</a>
     }
     return (
         <Headroom>
