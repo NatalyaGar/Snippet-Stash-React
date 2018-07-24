@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\" \"cd seeds && node seedCategories.js\"",
-    "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "start": "node app.js"
   },
   "engines": {
     "node": "10.4.1"
