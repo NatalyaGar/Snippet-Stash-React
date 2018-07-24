@@ -28,6 +28,15 @@
    
 }
 
+#categoryBtn {
+    background: #52C4B9;
+}
+
+#categoryBtn a {
+    font-family: 'Lato', sans-serif;
+    color: black;
+}
+
 .navBar {
     list-style-type: none;
     float: left;
@@ -42,12 +51,12 @@
 }
 
 .navLink a:hover {
-    background-color: white;
+    background-color: rgb(148, 226, 218);
 }
 
 .navLink a:active {
-    background-color: #2E4158;
-    color: white;
+    background-color: grey;
+    color: black;
 }
 
 @media screen and (min-width: 768px){
