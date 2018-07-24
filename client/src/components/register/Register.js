@@ -14,7 +14,7 @@ class RegisterPage extends React.Component {
             <Router>
 
             <div className= "Register">
-                <div className= "Register__Aside"> <a href="" className="SnippetLogo"><i className="fas fa-cut"></i><strong>SNIPPETstash</strong> </a>
+                <div className= "Register__Aside"> <div className="SnippetLogo"><i className="fas fa-cut"></i><strong>SNIPPETstash</strong> </div>
                 </div>
                 <div className= "Register__Form">
                     
