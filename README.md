@@ -1,29 +1,40 @@
 # Snippet-Stash-React
+Deployed here: https://snippetstash-mern.herokuapp.com/
 
-# SnippetStash Version 2
+
+## SnippetStash Version 2
 A code snippet and boilerplate library for new coders
-
+* Revamped with ReactJS from version 1
+* Version 1 can be viewed here:
 https://snippet-stash.herokuapp.com/
 
-**SnippetStash**
--To provide a database for coders to find communal code snippets and create/save their own library of snippets for future use.
--a user can create an account and login in order to store perosal snippets of code in addition to makeing comments about their code.
--if a user chooses to login onto page as a guest they may look at code that has been published on the public page
 
+## SnippetStash 2.0
+* To provide a database for coders to find communal code snippets and create/save their own library of snippets for future use.
+* A user can create an account and login
+* For the pupose of storing personal snippets of code and making comments about their code.
+* Solves the problem of creating a space to store and share boilerplate code and useful, helpful and fascinating snippets of CODE.
 
-**Instructions**
+### Technologies Used
+* Uses ReactJS 
+* Uses a Node and Express Web Server
+* Backed by a MongoDB Database with a Mongoose ORM  
+* Has both GET and POST routes for retrieving and adding new data
+* Deployed using Heroku (with Data)
+* The developers researched and utilized the following libraries, packages, or technologies:
+    * ClipboardJS 
+    * React-CodeMirror
+    * Flexbox (CSS)
+    * Reactstrap (CSS)
+    * React-headroom (CSS)
 
-**App Setup**
+* Involves the authentication of users 
+    * Users can create an account
 
-1. Create a repository in Github  called SnippetStash and clone this repository onto your computer. 
+* Polished frontend / UI 
+    * Uses flexbox
+    * Developers still plan to remov Bootstrap
+* Folder structure that meets MVC Paradigm
+* Good quality coding standards (indentation, scoping, naming)
+* Does not expose sensitive API key information on the server
 
-
-
-
-**Database Setup**
-
-1. Open a terminal and run the command:         mongod
-
-2. Open a second terminal and run the command:  mongo
-
-3. From the command line, run the command:      yarn dev
