@@ -3,10 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CodeMirror from './CodeMirror';
 
-
-
-// let previousDescription;
-
 class Edit extends Component {
   state = {
     snippet: {}
@@ -18,7 +14,6 @@ class Edit extends Component {
         this.setState({ snippet: res.data });
         console.log(this.state.snippet);
         console.log(this.state.snippet.description);
-        // previousDescription = this.state.snippet.description
       });
   }
 
@@ -27,13 +22,6 @@ class Edit extends Component {
     state[e.target.name] = e.target.value;
     this.setState({snippet:state});
   }
-
-  // onChange = (e) => {
-  //   const state = this.state
-  //   state[e.target.name] = e.target.value;
-  //   this.setState(state);
-  // }
-
 
   updateCode = (code) => {
     this.setState({snippet: {
@@ -83,7 +71,7 @@ class Edit extends Component {
                   ? <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
                   : " Sorry, you cannnot delete everything in the description box. Please refresh the page and try your edit again."
                 }
-                {/* <input type="text" rows="11" className="form-control" name="description" value={this.state.snippet.description} onChange={this.onChange} placeholder="Description" /> */}
+               
               </div>
               <div className="form-group">
                 <label htmlFor="comment">Comments:</label>

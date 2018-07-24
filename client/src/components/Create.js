@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import CodeMirror from './CodeMirror';
-// import Editor from './CodeMirror';
-
 
 class Create extends Component {
 
@@ -38,8 +35,6 @@ class Create extends Component {
         this.props.history.push("/")
       });
   }
-
-
 
   render() {
     const { category, title, author, comment } = this.state;

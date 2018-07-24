@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route,Link, NavLink} from "react-router-dom";
-// import PageSwitcher from "./PageSwitcher";
 import RegisterForm from "./RegisterForm";
 import SignInForm from "./SignInForm";
 import "./RegisterPage.css";
-//import axios from 'axios';
+
 
 
 

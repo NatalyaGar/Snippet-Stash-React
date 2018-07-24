@@ -74,8 +74,6 @@ class CategoryBar extends Component {
             </nav>
             </Nav>
 
-                
-        
         )
     }
 }

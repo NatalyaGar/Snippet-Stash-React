@@ -24,38 +24,6 @@ function destroy (req, res) {
     console.log('DESTROY HIT!');
 }
 
-//   /* GET SINGLE SNIPPET BY ID */
-// router.get('/:id', function(req, res, next) {
-//     Book.findById(req.params.id, function (err, post) {
-//       if (err) return next(err);
-//       res.json(post);
-//     });
-//   });
-  
-//   /* SAVE SNIPPET */
-//   router.post('/', function(req, res, next) {
-//     Book.create(req.body, function (err, post) {
-//       if (err) return next(err);
-//       res.json(post);
-//     });
-//   });
-  
-//   /* UPDATE SNIPPET */
-//   router.put('/:id', function(req, res, next) {
-//     Book.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
-//       if (err) return next(err);
-//       res.json(post);
-//     });
-//   });
-  
-//   /* DELETE SNIPPET */
-//   router.delete('/:id', function(req, res, next) {
-//     Book.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-//       if (err) return next(err);
-//       res.json(post);
-//     });
-//   });
-
 module.exports = {
     createCategory: create,
     getAllCategories: readAll,

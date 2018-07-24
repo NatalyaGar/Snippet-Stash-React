@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import {UnControlled as CodeMirror} from 'react-codemirror2'
 import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
-// import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/theme/cobalt.css';
 
