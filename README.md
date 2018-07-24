@@ -33,7 +33,7 @@ https://snippet-stash.herokuapp.com/
 
 * Polished frontend / UI 
     * Uses flexbox
-    * Developers still plan to remov Bootstrap
+    * Developers still plan to remove Bootstrap
 * Folder structure that meets MVC Paradigm
 * Good quality coding standards (indentation, scoping, naming)
 * Does not expose sensitive API key information on the server
