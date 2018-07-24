@@ -4,11 +4,10 @@ import axios from 'axios';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-import { Navbar, Button, Glyphicon } from 'react-bootstrap';
-import Sidebar from 'react-sidebar';
+
 import "./CategoryBar.css";
 
-const mql = window.matchMedia(`(min-width: 800px)`);
+
 
 class CategoryBar extends Component {
     constructor(props) {
