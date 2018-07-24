@@ -71,7 +71,7 @@ class Edit extends Component {
                   ? <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
                   : " Sorry, you cannnot delete everything in the description box. Please refresh the page and try your edit again."
                 }
-               
+              
               </div>
               <div className="form-group">
                 <label htmlFor="comment" className="labels">COMMENTS:</label>

@@ -50,26 +50,26 @@ class Create extends Component {
             <h4><Link className="backLink" to="/"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label  className="labels" htmlFor="category">CATEGORY:</label>
-                <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="Category" />
+                <label className="labels" htmlFor="category">CATEGORY:</label>
+                <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
               </div>
               <div className="form-group">
-                <label  className="labels" htmlFor="title">TITLE</label>
+                <label className="labels" htmlFor="title">TITLE:</label>
                 <input type="text" className="showData form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
               </div>
               <div className="form-group">
-                <label  className="labels" htmlFor="author">AUTHOR:</label>
+                <label className="labels" htmlFor="author">AUTHOR:</label>
                 <input type="text" className="showData form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
               </div>
               <div className="form-group">
-                <label  className="labels" htmlFor="description">DESCRIPTION:</label>
-                <CodeMirror id="codeDescription" name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                <label className="labels" htmlFor="description">DESCRIPTION:</label>
+                <CodeMirror name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
               </div>
               <div className="form-group">
-                <label  className="labels" htmlFor="comment">COMMENT:</label>
+                <label className="labels" htmlFor="comment">COMMENT:</label>
                 <textarea type="text" className="showData form-control" name="comment" value={comment} onChange={this.onChange} placeholder="(Optional) Add a comment" cols="40" rows="6"></textarea>
               </div>
-              <button type="submit" className="clipboardBtn btn btn-default">Submit</button>
+              <button type="submit" className="btn btn-default clipboardBtn">Submit</button>
             </form>
           </div>
         </div>
