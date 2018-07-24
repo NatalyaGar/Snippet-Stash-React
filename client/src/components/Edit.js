@@ -45,28 +45,28 @@ class Edit extends Component {
     return (
       <div className="container">
         <div className="panel panel-default">
-          <div className="panel-heading">
+          <div className="panel-heading" id="editCardHeading">
             <h3 className="panel-title">
               EDIT SNIPPET
             </h3>
           </div>
           <div className="panel-body">
-            <h4><Link to={`/show/${this.state.snippet._id}`}><span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back To Snippet</Link></h4>
+            <h4><Link className="backLink" to={`/show/${this.state.snippet._id}`}><span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back To Snippet</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label htmlFor="category">CATEGORY</label>
-                <input type="text" className="form-control" name="category" value={this.state.snippet.category} onChange={this.onChange} placeholder="CATEGORY" />
+                <label htmlFor="category" className="labels">CATEGORY</label>
+                <input type="text" className="showData form-control" name="category" value={this.state.snippet.category} onChange={this.onChange} placeholder="CATEGORY" />
               </div>
               <div className="form-group">
-                <label htmlFor="title">Title:</label>
-                <input type="text" className="form-control" name="title" value={this.state.snippet.title} onChange={this.onChange} placeholder="Title" />
+                <label htmlFor="title" className="labels">TITLE:</label>
+                <input type="text" className="showData form-control" name="title" value={this.state.snippet.title} onChange={this.onChange} placeholder="Title" />
               </div>
               <div className="form-group">
-                <label htmlFor="author">Author:</label>
-                <input type="text" className="form-control" name="author" value={this.state.snippet.author} onChange={this.onChange} placeholder="Author" />
+                <label htmlFor="author" className="labels">AUTHOR:</label>
+                <input type="text" className="showData form-control" name="author" value={this.state.snippet.author} onChange={this.onChange} placeholder="Author" />
               </div>
               <div className="form-group">
-                <label htmlFor="description">Description:</label>
+                <label htmlFor="description" className="labels">DESCRIPTION:</label>
                 {this.state.snippet.description
                   ? <CodeMirror name="description" description={this.state.snippet.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
                   : " Sorry, you cannnot delete everything in the description box. Please refresh the page and try your edit again."
@@ -74,10 +74,10 @@ class Edit extends Component {
                
               </div>
               <div className="form-group">
-                <label htmlFor="comment">Comments:</label>
-                <input type="text" className="form-control" name="comment" value={this.state.snippet.comment} onChange={this.onChange} placeholder="Comments" />
+                <label htmlFor="comment" className="labels">COMMENTS:</label>
+                <input type="text" className="showData form-control" name="comment" value={this.state.snippet.comment} onChange={this.onChange} placeholder="Comments" />
               </div>
-              <button type="submit" className="btn btn-default">Submit</button>
+              <button type="submit" className="clipboardBtn btn btn-default">Submit</button>
             </form>
           </div>
         </div>
