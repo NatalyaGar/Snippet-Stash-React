@@ -37,8 +37,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
+// app.use middleware setups
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use('/api/snippet', snippet);
 
@@ -46,6 +48,10 @@ app.use('/api/snippet', snippet);
 app.use(routes);
 
 module.exports = app;
+
+app.get("*", (req, res) => {  
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(port, () => {
   console.log('Server started on port: ' + port);
