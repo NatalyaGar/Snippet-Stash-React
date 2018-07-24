@@ -22,6 +22,7 @@
     background-color: #2E4158;
     padding: 25px 40px;
     overflow: auto;
+    font-size: 2em
   }
   
   .PageSwitcher {
@@ -62,13 +63,13 @@
   }
   
   .FormTitle {
-    color: #707C8B;
+    color:white;
     font-weight: 300;
     margin-bottom: 50px;
   }
   
   .FormTitle__Link {
-    color: #707C8B;
+    color: white;
     text-decoration: none;
     display: inline-block;
     font-size: 1.7em;
@@ -102,7 +103,7 @@
     color: white;
     outline: none;
     border-bottom: 1px solid #445366;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: 300;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -124,7 +125,7 @@
   }
   
   .FormField__Link {
-    color: #66707D;
+    color: white;
     text-decoration: none;
     display: inline-block;
     border-bottom: 1.5px solid #225E62;
