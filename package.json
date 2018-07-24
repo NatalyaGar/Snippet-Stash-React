@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "heroku-prebuild": "rm -rf public/ && mkdir public",
-    "heroku-postbuild": "cd client && npm i && npm run build",
+   
     "start": "nodemon app.js",
     "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\" \"cd seeds && node seedCategories.js\""
   },
