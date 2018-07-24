@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from "./components/Header";
 import CategoryBar from './components/CategoryBar';
+import "./App.css";
+
 
 class App extends Component {
 
@@ -56,14 +58,14 @@ class App extends Component {
           </div>
 
           <div className="col-10">
-            <div className="panel panel-default">
-              <div className="panel-heading">
+            <div className="mainSection panel panel-default">
+              <div className="panel-heading" id="card-heading">
                 <h3 className="panel-title" >
                   <a aria-label="Left Align">
-                    <span className="glyphicon glyphicon-scissors" aria-hidden="true"> </span>
+                    <span className="fas fa-cut" aria-hidden="true"> </span>
                   </a>  SNIPPET CATALOG </h3>
               </div>
-              <div className="panel-body">
+              <div className="panel-body" id="panelBody">
                 <h4><Link to="/create"><span className="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Add A New Snippet</Link></h4>
                 <table className="table table-stripe">
                   <thead>
