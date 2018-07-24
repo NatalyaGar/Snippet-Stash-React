@@ -5,15 +5,6 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-/* Go to main page */
-// router.get('/register', function(req, res, next) {
-//     User.find(function (err, email) {
-//       if (err) return next(err);
-//       res.json(email);
-//     });
-//   });
-  
-
   /* GET SINGLE USER BY ID */
 router.get('/:id', function(req, res, next) {
     User.findById(req.params.id, function (err, post) {
@@ -61,8 +52,6 @@ router.get('/:id', function(req, res, next) {
         });
     }
     email = email.toLowerCase(); 
-
-    // console.log({ email: email })
 
     //Steps:
     //1. Verify email doesn't exist
@@ -113,29 +102,7 @@ router.get('/:id', function(req, res, next) {
                 };
             })
         }
-    });
-
-
-    // User.findOne ({
-    //     email: email
-    // }), (err, previousUsers) =>{
-    //     console.log('Inside')
-    //     if (err) {
-    //         return res.json({
-    //             success:false,
-    //             message:"Error: Server Error"
-    //         });
-    //     }   else if (previousUsers) {
-
-    //         return res.json({
-    //             success:true,
-    //             message:"Error: Account already exists"
-    //         });
-    //     }   
-
-    //     //Save the new user
-    //     
-    // }
+    });   
   });
 
   module.exports = router;

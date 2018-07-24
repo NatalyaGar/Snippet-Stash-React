@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-//require User model in routes module
 var User = require('../models/User');
 
 /* GET ALL Users */

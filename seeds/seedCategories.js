@@ -49,11 +49,6 @@ categoryList.forEach(category => {
     seedDocument(category);
 });
 
-// Category.create(categoryList, function (err) {
-
-//     }
-
-    // process.exit();
 
 
 
