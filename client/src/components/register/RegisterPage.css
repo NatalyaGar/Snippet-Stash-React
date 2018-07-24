@@ -7,6 +7,14 @@
   .Register__Aside {
     width: 50%;
     background-color: #66DAC7;
+    font-size: 6em;
+    background-image: url("https://s3.amazonaws.com/media-p.slid.es/uploads/tyleryoungblood/images/517474/code_snippets.jpg");
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-position: center;
+    background-size: 500px 300px;
+   
+
   }
   
   .Register__Form {
