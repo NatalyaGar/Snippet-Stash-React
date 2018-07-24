@@ -31,10 +31,12 @@ class RegisterForm extends Component {
                 
                 <div className="FormField">
                     <button className= "FormField__Button mr-20">Sign Up</button>
-                    <Link to= "/sign-in" className= "FormField__Link"> I'm already a member</Link>
-                    <a className="FormField__Link" href="/">{'Enter as a Guest Here'}</a>
+                   
                 </div>
-            
+                <div>
+                <Link to= "/sign-in" className= "FormField__LinkMember">Already a member</Link>
+                    <a className="FormField__LinkGuest" href="/">{'Enter as a Guest Here'}</a>
+                </div>
              </form>   
             </div>
         );

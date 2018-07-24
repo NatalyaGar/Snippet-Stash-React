@@ -45,7 +45,7 @@ class SignInForm extends Component {
                 <form className="FormFields" onSubmit={(e) => this.onSubmit(e)}>
 
                     <div className="FormField">
-                        <label className="FormField__Label" htmlFor="name">Email</label>
+                        <label className="FormField__LabelSignIn" htmlFor="name">Email</label>
                         <input type="email" id="email" className="FormField__Input" placeholder="Enter Your email" name="email" value={this.state.email} onChange={this.onChange} />
                     </div>
 
@@ -57,9 +57,13 @@ class SignInForm extends Component {
 
                     <div className="FormField">
                         <button className="FormField__Button mr-20" type="submit">Submit</button>
-                        <Link to="/register" className="FormField__Link"> Create an Account</Link>
-                        <a className="FormField__Link" href="/">{'Enter as a Guest Here'}</a>
+                        
                     </div>
+
+                     <div>
+                      <Link to= "/sign-in" className= "FormField__LinkMember">Create an Account</Link>
+                      <a className="FormField__LinkGuest" href="/">{'Enter as a Guest Here'}</a>
+                     </div>
 
                 </form>
 

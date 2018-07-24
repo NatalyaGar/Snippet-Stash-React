@@ -26,12 +26,12 @@ class RegisterPage extends React.Component {
                     </div>
 
     
-                    <div className="FormTitle">
+                    {/* <div className="FormTitle">
 
                         <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign In </NavLink> or 
                         <NavLink to="/register" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
                 
-                    </div>
+                    </div> */}
 
                     <Route path= "/register" component= {RegisterForm}>
                     
