@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Header from "./components/Header";
 import CategoryBar from './components/CategoryBar';
-// import CodeMirror from './components/CodeMirror';
 
 class App extends Component {
 
@@ -70,7 +68,6 @@ class App extends Component {
                 <table className="table table-stripe">
                   <thead>
                     <tr>
-                      {/* <th>category</th> */}
                       <th>Category</th>
                       <th>Title</th>
                       <th>Author</th>

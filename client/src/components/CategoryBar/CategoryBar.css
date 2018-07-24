@@ -7,16 +7,11 @@
     padding-top: 5px;
 }
 
-/* .mySnippets {
-    width: 150px;
-} */
-
 .snippetsButton {
     width: 140px;
     float: left;
     margin-left: 0px;
     border: none;
-    /* background-color: #2E4158; */
     color: white;
 }
 
@@ -30,18 +25,12 @@
 #searchForm {
     width: 100px;
     float: left;
-    /* margin-left: 5px; */
+   
 }
 
 .navBar {
-    /* background-color: #66DAC7; */
     list-style-type: none;
     float: left;
-    /* padding-right: 20px; */
-}
-
-.navLink {
-    
 }
 
 .navButton {
@@ -49,7 +38,7 @@
     float: left;
     margin-left: 0;
     border: none;
-    /* background-color: #66DAC7; */
+    
 }
 
 .navLink a:hover {

@@ -35,9 +35,7 @@ class RegisterForm extends Component {
         })
             .then((result) => {
                 window.location.replace('/');
-                // this.props.history.push("/")
                 console.log(result);
-                // result.redirect('/')
             })
             .catch((error) => {
                 console.log(error);

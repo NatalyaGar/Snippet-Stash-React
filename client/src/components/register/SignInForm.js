@@ -30,55 +30,14 @@ class SignInForm extends Component {
         })
             .then((result) => {
                 window.location.replace('/');
-                // this.props.history.push("/")
                 console.log(result);
             })
             .catch((error) => {
                 console.log(error);
             })
     }
-    //     this.handleChange = this.handleChange.bind(this);
-    // }
-    // handleChange(e) {
-    //     let target = e.target;//select target element (email and password input)
-    //     let value = target.type === "checkbox" ? target.checked : target.value;
-    //     let name = target.name;
-
-    //     //reset state (above0 every time there is a change
-    //     this.setState({
-    //        [name]: value
-    //     });
-
-
-    // onSubmit = (e) => {
-    //     e.preventDefault();
-
-    // const {email,password } = this.state;
-
-    // axios.post('/api/signin/sign-in', { email, password })
-    //   .then((result) => {
-    //     // this.props.history.push("/signin")
-    //     console.log(result);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // })
-
-
-    //}
-
-    //     componentsDidMount(){
-    //     axios.post('/api/register')
-    //       .then((response => {
-    //         const {data} = response;
-    //         this.setState({ user: data}, ()=> console.log(this.state));
-    //         console.log(data);
-    //       })
-    //       .catch(error => console,log(error));
-    //}
-
+    
     render() {
-        // const { email, password } = this.state;
         return (
             <div className="FormCenter">
                 <form className="FormFields" onSubmit={(e) => this.onSubmit(e)}>

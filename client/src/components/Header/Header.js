@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import Headroom from 'react-headroom';
 import "./Header.css";
 
-// const user = {
-//     _id: '12345',
-//     name: '',
-// }
-
-//TODO: if user is logged in, display their name, if not display guest
-//AND:    Change "Sign Out" to "Sign In"
 const Header = props => {
     let Greeting
     let InOutLink

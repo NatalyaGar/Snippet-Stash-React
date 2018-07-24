@@ -30,11 +30,6 @@ userList.forEach(user => {
     seedDocument(user);
 });
 
-// User.create(userList, function (err) {
-
-//     }
-
-    // process.exit();
 
 
 
