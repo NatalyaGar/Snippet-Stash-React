@@ -39,7 +39,7 @@ class CategoryBar extends Component {
             <div className="navbar-default navbar-toggler sidebar" role="navigation">
             <div className="sidebar-nav navbar-collapse">
                  <ul className="nav" id="side-menu">
-                     <li className="sidebar-search">
+                     {/* <li className="sidebar-search">
                          <div id="searchForm" className="input-group custom-search-form">
                              <input type="text" className="form-control" placeholder="Search..."/>
                              <span className="input-group-btn">
@@ -48,17 +48,17 @@ class CategoryBar extends Component {
                                  </button>
                              </span>
                          </div>
-                     </li>
-                     <li className="mySnippets">
+                     </li> */}
+                     {/* <li className="mySnippets">
                          <button className="snippetsButton">
                          <h4><a href="#"><i className="fa fa-heart fa-fw"></i> My Snippets</a></h4>
                          </button>
-                     </li>
+                     </li> */}
                  <NavItem className="navItem">
                      <NavLink className="navLink"><a>
                          { categories.map((category, index) => 
                             <li>
-                            <button className="navButton">
+                            <button className="navButton" id="categoryBtn">
                              <td><h4><Link to={category._id}>{category.item}</Link></h4></td>
                             </button>
                              </li>

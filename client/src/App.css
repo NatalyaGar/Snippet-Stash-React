@@ -1,7 +1,34 @@
-
+/* 
 #wrapper {
     width: 100%;
     max-width: 968px;
     margin: 0 auto;
+} */
+
+.mainSection {
+    margin-top: 25px;
+}
+
+#panelBody a {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #52C4B9;
+    font-size: 15px;
+}
+
+#panelBody td {
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 15px;
+}
+
+#panelBody th {
+    font-family: 'Merienda', cursive;
+    color: #2E4158;
+    font-size: 15px;
+}
+
+#card-heading {
+    background-color: #52C4B9;
 }
 
