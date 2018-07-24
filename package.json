@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-   
+    "build": "react-scripts build",
     "start": "nodemon app.js",
     "dev": "concurrently \"nodemon app.js\" \"cd client && yarn start\" \"cd seeds && node seedCategories.js\""
   },
