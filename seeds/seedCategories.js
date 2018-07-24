@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern-crud");
-const Category = require('../models/category');
+const Category = require('../models/Category');
 mongoose.Promise = Promise;
 
 const categoryList = [
