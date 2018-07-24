@@ -6,7 +6,7 @@ const Header = props => {
     let Greeting
     let InOutLink
     if (props.user === null) {
-        Greeting = <a href="" className="navA font2">Hello guest</a>
+        Greeting = <a href="" className="navA font2">Hello Guest</a>
         InOutLink = <a href="/register" className="navA font1">Sign In</a>
     } else if (props.user.firstName) {
         Greeting = (
