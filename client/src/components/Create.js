@@ -41,35 +41,35 @@ class Create extends Component {
     return (
       <div className="container">
         <div className="panel panel-default">
-          <div className="panel-heading">
+          <div className="panel-heading" id="showCardHeading">
             <h3 className="panel-title">
               ADD SNIPPET
             </h3>
           </div>
           <div className="panel-body">
-            <h4><Link to="/"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List</Link></h4>
+            <h4><Link className="backLink" to="/"><span className="glyphicon glyphicon-th-list" aria-hidden="true"></span> Snippet List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label htmlFor="category">CATEGORY:</label>
-                <input type="text" className="form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
+                <label  className="labels" htmlFor="category">CATEGORY:</label>
+                <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="Category" />
               </div>
               <div className="form-group">
-                <label htmlFor="title">Title:</label>
-                <input type="text" className="form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
+                <label  className="labels" htmlFor="title">TITLE</label>
+                <input type="text" className="showData form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />
               </div>
               <div className="form-group">
-                <label htmlFor="author">Author:</label>
-                <input type="text" className="form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
+                <label  className="labels" htmlFor="author">AUTHOR:</label>
+                <input type="text" className="showData form-control" name="author" value={author} onChange={this.onChange} placeholder="Author" />
               </div>
               <div className="form-group">
-                <label htmlFor="description">Description:</label>
-                <CodeMirror name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
+                <label  className="labels" htmlFor="description">DESCRIPTION:</label>
+                <CodeMirror id="codeDescription" name="description" description={this.state.description} onChange={(code) => this.updateCode(code)} ></CodeMirror>
               </div>
               <div className="form-group">
-                <label htmlFor="comment">Comment:</label>
-                <textarea type="text" className="form-control" name="comment" value={comment} onChange={this.onChange} placeholder="(Optional) Add a comment" cols="40" rows="6"></textarea>
+                <label  className="labels" htmlFor="comment">COMMENT:</label>
+                <textarea type="text" className="showData form-control" name="comment" value={comment} onChange={this.onChange} placeholder="(Optional) Add a comment" cols="40" rows="6"></textarea>
               </div>
-              <button type="submit" className="btn btn-default">Submit</button>
+              <button type="submit" className="clipboardBtn btn btn-default">Submit</button>
             </form>
           </div>
         </div>
