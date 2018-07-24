@@ -42,6 +42,8 @@ class Show extends Component {
             <dl>
               <dt className="labels">CATEGORY:</dt>
               <dd className="showData">{this.state.snippet.category}</dd>
+              <dt className="labels">TITLE:</dt>
+              <dd className="showData">{this.state.snippet.title}</dd>
               <dt className="labels">AUTHOR:</dt>
               <dd className="showData">{this.state.snippet.author}</dd>
               <dt className="labels">DESCRIPTION:</dt>
