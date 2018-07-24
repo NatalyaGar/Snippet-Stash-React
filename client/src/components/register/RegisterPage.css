@@ -157,7 +157,12 @@
     margin-left: 5px;
   }
 
-.navA {
+.SnippetLogo {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 10px;
   color: #2E4158;
   margin-top: 150px;
 }
