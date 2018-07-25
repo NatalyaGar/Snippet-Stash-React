@@ -17,9 +17,9 @@ router.get('/sign-in', function(req, res, next) {
        res.json(post);
      });
   });
-/* Sign Up */
+/* Sign In */
 router.post('/sign-in', function(req, res, next)  {
-  const { body } = req;
+  let { body } = req;
   let {
       email,
       password,
@@ -45,7 +45,7 @@ router.post('/sign-in', function(req, res, next)  {
   //1. Verify email doesn't exist
   //2. Save
       email: email
-  }), (err, previousUsers) =>{
+  }, (err, previousUsers) =>{
       if (err) {
          return res.json({
               success:false,
