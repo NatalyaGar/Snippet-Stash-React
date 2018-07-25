@@ -61,7 +61,7 @@ class SignInForm extends Component {
                     </div>
 
                      <div>
-                      <Link to= "/sign-in" className= "FormField__LinkMember">Create an Account</Link>
+                      <Link to= "/register" className= "FormField__LinkMember">Create an Account</Link>
                       <a className="FormField__LinkGuest" href="/">{'Enter as a Guest Here'}</a>
                      </div>
 
