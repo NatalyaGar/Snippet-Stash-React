@@ -18,9 +18,19 @@
     background-attachment: relative;
     background-position: center;
     background-size: 500px 300px;
-   
-
   }
+
+  .SnippetLogo {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2E4158;
+    margin-top: 85px;
+  }
+  
   
   .Register__Form {
     width: 50%;
@@ -172,17 +182,6 @@
     padding-bottom: 2px;
     margin-left: 5px;
   }
-
-.SnippetLogo {
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  display: block;
-  padding: 10px;
-  color: #2E4158;
-  margin-top: 150px;
- 
-}
 
 .font1 {
     font-family: 'Lato', sans-serif;
