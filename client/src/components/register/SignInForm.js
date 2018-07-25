@@ -30,9 +30,9 @@ class SignInForm extends Component {
             email: email,
             password: password
         })
-            .then((result) => {
+            .then((res) => {
                 window.location.replace('/');
-                console.log(result);
+                console.log(res);
             })
             .catch((error) => {
                 console.log(error);

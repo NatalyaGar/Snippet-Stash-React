@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var User = require('../models/User');
+var User = require('../models/');
 
 /* GET ALL Users */
 router.get('/sign-in', function(req, res, next) {
@@ -11,6 +11,12 @@ router.get('/sign-in', function(req, res, next) {
     });
   });
   
+  router.get('/:id', function(req, res, next) {
+       User.findById(req.params.id, function (err, post) {
+       if (err) return next(err);
+       res.json(post);
+     });
+  });
 /* Sign Up */
 router.post('/sign-in', function(req, res, next)  {
   const { body } = req;
@@ -34,7 +40,7 @@ router.post('/sign-in', function(req, res, next)  {
   }
   email = email.toLowerCase();
 
-  User.find ({
+  User.findOne ({
   //Steps:
   //1. Verify email doesn't exist
   //2. Save
