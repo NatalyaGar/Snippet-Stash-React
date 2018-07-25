@@ -17,6 +17,8 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 var routes = require('./routes');
+var user = require("./routes/user");
+var signin = require("./routes/signin");
 
 // mongoose.Promise = require('bluebird');
 // mongoose.connect('mongodb://localhost/mern-crud', { useMongoClient: true, promiseLibrary: require('bluebird') })
@@ -43,6 +45,9 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 app.use('/api/snippet', snippet);
+app.use('/api/user', user);
+app.use('/api/signin', signin);
+  
 
 // Add routes, both API and view
 app.use(routes);

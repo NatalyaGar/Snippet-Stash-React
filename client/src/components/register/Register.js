@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route,Link, NavLink} from "react-router-dom";
 import RegisterForm from "./RegisterForm";
 import SignInForm from "./SignInForm";
 import "./RegisterPage.css";
-
+import axios from 'axios';
 
 
 
@@ -24,14 +24,6 @@ class RegisterPage extends React.Component {
                         <NavLink exact to= "/register" activeClassName="PageSwitcher__Item--Active" 
                         className= "PageSwitcher__Item"> Sign Up </NavLink>
                     </div>
-
-    
-                    {/* <div className="FormTitle">
-
-                        <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign In </NavLink> or 
-                        <NavLink to="/register" activeClassName="FormTitle__Link--Active" className= "FormTitle--Link"> Sign Up </NavLink>
-                
-                    </div> */}
 
                     <Route path= "/register" component= {RegisterForm}>
                     

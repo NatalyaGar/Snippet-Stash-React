@@ -56,8 +56,7 @@ class SignInForm extends Component {
 
 
                     <div className="FormField">
-                        <button className="FormField__Button mr-20" type="submit">Submit</button>
-                        
+                        <button className="FormField__Button mr-20" type="submit">Submit</button> 
                     </div>
 
                      <div>
