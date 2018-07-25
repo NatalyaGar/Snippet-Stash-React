@@ -34,6 +34,12 @@
     font-size: 15px;
 }
 
+.categoryDrop {
+    font-family: 'Lato', sans-serif;
+    color: #495057;
+    font-size: 12px;
+}
+
 .showData {
     font-family: 'Lato', sans-serif;
     color: #2E4158;
