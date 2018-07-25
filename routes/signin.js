@@ -58,7 +58,7 @@ router.post('/sign-in', function(req, res, next)  {
               message:"Error: Account already exists"
           });
       }   
-  }
+  })
 })
 
 
