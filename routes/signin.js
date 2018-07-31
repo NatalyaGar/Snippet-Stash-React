@@ -19,7 +19,7 @@ router.get('/sign-in', function(req, res, next) {
   });
 /* Sign In */
 router.post('/sign-in', function(req, res, next)  {
-  let { body } = req;
+  const { body } = req;
   let {
       email,
       password,
@@ -40,7 +40,7 @@ router.post('/sign-in', function(req, res, next)  {
   }
   email = email.toLowerCase();
 
-  User.findOne ({
+  db.User.findOne ({
   //Steps:
   //1. Verify email doesn't exist
   //2. Save

@@ -31,8 +31,9 @@ class SignInForm extends Component {
             password: password
         })
             .then((res) => {
-                window.location.replace('/');
                 console.log(res);
+                window.location.replace('/');
+                
             })
             .catch((error) => {
                 console.log(error);

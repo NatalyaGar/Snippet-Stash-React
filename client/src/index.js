@@ -21,7 +21,7 @@ ReactDOM.render(
         <Route path='/create' component={Create} />
         <Route path='/show/:id' component={Show} />
         <Route path= '/register' component= {Register}/>
-                
+       
       </div>
   </Router>,
   document.getElementById('root')

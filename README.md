@@ -21,20 +21,9 @@ https://snippet-stash.herokuapp.com/
 * Backed by a MongoDB Database with a Mongoose ORM  
 * Has both GET and POST routes for retrieving and adding new data
 * Deployed using Heroku (with Data)
-* The developers researched and utilized the following libraries, packages, or technologies:
+* Utilized the following libraries and technologies:
     * ClipboardJS 
     * React-CodeMirror
     * Flexbox (CSS)
-    * Reactstrap (CSS)
-    * React-headroom (CSS)
-
-* Involves the authentication of users 
-    * Users can create an account
-
-* Polished frontend / UI 
-    * Uses flexbox
-    * Developers still plan to remove Bootstrap
-* Folder structure that meets MVC Paradigm
-* Good quality coding standards (indentation, scoping, naming)
-* Does not expose sensitive API key information on the server
+   
 
