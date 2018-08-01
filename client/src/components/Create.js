@@ -51,8 +51,9 @@ class Create extends Component {
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label className="labels" htmlFor="category">CATEGORY:</label>
-                <div type="text" className="showData" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" >
-                  <select className="form-control categoryDrop" id="snippetCategory">
+                {/* <div type="text" className="showData" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" > */}
+                <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
+                  {/* <select className="form-control categoryDrop" id="snippetCategory">
                     <option value="1">  AJAX</option>
                     <option value="2">  CSS</option>
                     <option value="3">  Express</option>
@@ -74,8 +75,8 @@ class Create extends Component {
                     <option value="19"> Node</option>
                     <option value="20"> Handlebars</option>
                     <option value="21"> Testing</option>
-                  </select>
-                </div>
+                  </select> */}
+                {/* </div> */}
               </div>
               <div className="form-group">
                 <label className="labels" htmlFor="title">TITLE:</label>
