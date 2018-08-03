@@ -53,31 +53,31 @@ class Create extends Component {
                 <label className="labels" htmlFor="category">CATEGORY:</label>
                 {/* <div type="text" className="showData" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" > */}
                 {/* <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" /> */}
-                  {/* <select className="form-control categoryDrop" id="snippetCategory"> */}
-                  <select className="form-control categoryDrop" id="snippetCategory"name="category" value={category} onChange={this.onChange} placeholder="CATEGORY">
-                    <option>  AJAX</option>
-                    <option>  CSS</option>
-                    <option>  Express</option>
-                    <option>  Firebase</option>
-                    <option>  Handlebars</option>
-                    <option>  HTML</option>
-                    <option>  JavaScript</option>
-                    <option>  jQuery</option>
-                    <option>  MongoDB</option>
-                    <option> Mongoose</option>
-                    <option> MySQL</option>
-                    <option> Node</option>
-                    <option> React</option>
-                    <option> Sequelize</option>
-                    <option> Mongoose</option>
-                    <option> Express</option>
-                    <option> MySQL</option>
-                    <option> MongoDB</option>
-                    <option> Node</option>
-                    <option> Handlebars</option>
-                    <option> Testing</option>
-                  </select> 
-                 </div>
+                {/* <select className="form-control categoryDrop" id="snippetCategory"> */}
+                <select className="form-control categoryDrop" id="snippetCategory" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY">
+                  <option>  AJAX</option>
+                  <option>  CSS</option>
+                  <option>  Express</option>
+                  <option>  Firebase</option>
+                  <option>  Handlebars</option>
+                  <option>  HTML</option>
+                  <option>  JavaScript</option>
+                  <option>  jQuery</option>
+                  <option>  MongoDB</option>
+                  <option> Mongoose</option>
+                  <option> MySQL</option>
+                  <option> Node</option>
+                  <option> React</option>
+                  <option> Sequelize</option>
+                  <option> Mongoose</option>
+                  <option> Express</option>
+                  <option> MySQL</option>
+                  <option> MongoDB</option>
+                  <option> Node</option>
+                  <option> Handlebars</option>
+                  <option> Testing</option>
+                </select>
+              </div>
               {/* </div> */}
               <div className="form-group">
                 <label className="labels" htmlFor="title">TITLE:</label>
