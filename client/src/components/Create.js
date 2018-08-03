@@ -52,32 +52,33 @@ class Create extends Component {
               <div className="form-group">
                 <label className="labels" htmlFor="category">CATEGORY:</label>
                 {/* <div type="text" className="showData" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" > */}
-                <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" />
-                  {/* <select className="form-control categoryDrop" id="snippetCategory">
-                    <option value="1">  AJAX</option>
-                    <option value="2">  CSS</option>
-                    <option value="3">  Express</option>
-                    <option value="4">  Firebase</option>
-                    <option value="5">  Handlebars</option>
-                    <option value="6">  HTML</option>
-                    <option value="7">  JavaScript</option>
-                    <option value="8">  jQuery</option>
-                    <option value="9">  MongoDB</option>
-                    <option value="10"> Mongoose</option>
-                    <option value="11"> MySQL</option>
-                    <option value="12"> Node</option>
-                    <option value="13"> React</option>
-                    <option value="14"> Sequelize</option>
-                    <option value="15"> Mongoose</option>
-                    <option value="16"> Express</option>
-                    <option value="17"> MySQL</option>
-                    <option value="18"> MongoDB</option>
-                    <option value="19"> Node</option>
-                    <option value="20"> Handlebars</option>
-                    <option value="21"> Testing</option>
-                  </select> */}
-                {/* </div> */}
-              </div>
+                {/* <input type="text" className="showData form-control" name="category" value={category} onChange={this.onChange} placeholder="CATEGORY" /> */}
+                  {/* <select className="form-control categoryDrop" id="snippetCategory"> */}
+                  <select className="form-control categoryDrop" id="snippetCategory"name="category" value={category} onChange={this.onChange} placeholder="CATEGORY">
+                    <option>  AJAX</option>
+                    <option>  CSS</option>
+                    <option>  Express</option>
+                    <option>  Firebase</option>
+                    <option>  Handlebars</option>
+                    <option>  HTML</option>
+                    <option>  JavaScript</option>
+                    <option>  jQuery</option>
+                    <option>  MongoDB</option>
+                    <option> Mongoose</option>
+                    <option> MySQL</option>
+                    <option> Node</option>
+                    <option> React</option>
+                    <option> Sequelize</option>
+                    <option> Mongoose</option>
+                    <option> Express</option>
+                    <option> MySQL</option>
+                    <option> MongoDB</option>
+                    <option> Node</option>
+                    <option> Handlebars</option>
+                    <option> Testing</option>
+                  </select> 
+                 </div>
+              {/* </div> */}
               <div className="form-group">
                 <label className="labels" htmlFor="title">TITLE:</label>
                 <input type="text" className="showData form-control" name="title" value={title} onChange={this.onChange} placeholder="Title" />

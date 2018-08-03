@@ -19,7 +19,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* SAVE SNIPPET */
+/* SAVE SNIPPET,create new entry */
 router.post('/', function(req, res, next) {
   Snippet.create(req.body, function (err, post) {
     if (err) return next(err);
