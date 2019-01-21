@@ -1,6 +1,9 @@
 # Snippet-Stash-React
 Deployed here: https://snippetstash-mern.herokuapp.com/
 
+<img src="public/images/snippetStashR.png" alt="Progect Picrure" width="300" height="200" />
+
+
 
 ## SnippetStash Version 2
 A code snippet and boilerplate library for new coders
