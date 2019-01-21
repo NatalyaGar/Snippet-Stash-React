@@ -1,7 +1,7 @@
 # Snippet-Stash-React
 Deployed here: https://snippetstash-mern.herokuapp.com/
 
-<img src="public/images/snippetStashR.png" alt="Progect Picrure" width="300" height="200" />
+<img src="public/images/snippetStashR.png" alt="Progect Picture" width="300" height="200" />
 
 
 
